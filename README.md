@@ -1,4 +1,4 @@
-###React Personal Website
+### React Personal Website
 
 + Currently looking at React build w/ Simple Webpack
 
