@@ -9,10 +9,17 @@
   },
   "author": "Colin Nash",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colinjnash/colin-nash-website.git"
+  },
   "dependencies": {
     "path": "^0.12.7",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
     "styled-components": "^2.4.0"
   },
   "devDependencies": {
