@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { NavbarWrap } from './styles/styles';
 import Navbar from './Navbar';
+import { injectGlobal } from 'styled-components';
 
 export default class App extends Component {
 	constructor(props) {
@@ -11,11 +13,11 @@ export default class App extends Component {
 
 	render() {
 		return (
-			<div>
+			<NavbarWrap>
 				<Navbar
 					navlist = {this.state.Navbar}
 				/>
-			</div>
+			</NavbarWrap>
 		);
 	}
 }

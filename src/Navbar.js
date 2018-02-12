@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { NavSpan } from './styles/styles';
 
 
 const Navbar = (props) => {
@@ -8,14 +8,14 @@ const Navbar = (props) => {
 
 const renderNavbar = (arr) => {
 		return arr.map((item, i) => 
-			<span key={i}>
+			<NavSpan key={i}>
 				{item}  
-			</span>
+			</NavSpan>
 		);
 	};
 	return (
 		<div>
-			<span>Colin Nash</span>
+			<NavSpan>Colin Nash</NavSpan>
 			{renderNavbar(navlist)}
 		</div>
 	);

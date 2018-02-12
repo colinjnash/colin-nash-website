@@ -1,0 +1,9 @@
+ @font-face {
+    font-family: 'Operator Mono';
+    src: url('../fonts/Operator-Mono.ttf');
+  }
+
+  body {
+  	font-family: 'Operator Mono';
+    margin: 0;
+  }
