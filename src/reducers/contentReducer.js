@@ -1,16 +1,23 @@
 import * as actionTypes from '../actions/actionTypes';
 
-import initialState from './initialState';
+const initialState = {
+	content: [],
+	isEnglish: true
+};
 
 const contentReducer  = (state = initialState, action) => {
 	switch (action.type) {
-		case actionTypes.ENGLISH: 
-		console.log('English reported')
-		return action;
-		default:
-			return state;
+	case actionTypes.ENGLISH: 
+		console.log('[Language Setting:English]');
+		console.log(action.value);
+		return {
+			...state,
+			isEnglish: action.value
+		}
+	default:
+		return state;
 	}
 
-}
+};
 
 export default contentReducer;
