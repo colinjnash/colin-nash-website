@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { NavbarWrap } from './styles/styles';
-import Navbar from './Navbar';
-import { injectGlobal } from 'styled-components';
+import { NavbarWrap, LangWrap, Container } from './styles/styles';
+import Navbar from './components/Navbar';
+import PropTypes from 'prop-types';
+import MainArticle from './components/MainArticle';
+
 import { connect } from 'react-redux';
 import * as actionTypes from './actions/actionTypes';
 
@@ -9,27 +11,46 @@ class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state= {
-			Navbar: ['Home', 'About', 'Portfolio', 'Contact']
+			Navbar: {
+				english: ['Home', 'About', 'Portfolio', 'Contact'],
+				french: ['Accueil', 'À Propos', 'Réalisations', 'Contact']
+			},
 		};
 	}
 
 	render() {
 		return (
-			<NavbarWrap>
-				<Navbar
-					navlist = {this.state.Navbar}
-					english = {this.props.english}
-					eng = {this.props.eng}
-				/>
-			</NavbarWrap>
+			<Container>
+				<NavbarWrap>
+					<Navbar
+						navlist = {this.state.Navbar}
+					
+						eng = {this.props.eng}
+					/>
+					<LangWrap
+						english = {this.props.english}
+						onClick={() => this.props.english(this.props.eng)}
+					>
+						{this.props.lang}
+					</LangWrap>
+				</NavbarWrap>
+			</Container>
 		);
 	}
 }
 
+App.propTypes = {
+	english: PropTypes.func,
+	eng: PropTypes.bool,
+	lang: PropTypes.string
+
+};
+
 const mapStateToProps = state => {
 	return {
 		content: state.lang.content,
-		eng: state.lang.isEnglish
+		eng: state.lang.isEnglish,
+		lang: state.lang.lang
 	};
 };
 

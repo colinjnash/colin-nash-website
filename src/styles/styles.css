@@ -3,7 +3,11 @@
     src: url('../fonts/Operator-Mono.ttf');
   }
 */
+html {
+	    width:100%;
+}
   body {
   	font-family: 'Operator Mono';
     margin: 0;
+    width:100%;
   }
