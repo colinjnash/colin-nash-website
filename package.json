@@ -8,7 +8,6 @@
     "start": "webpack-dev-server -d --config webpack.config.js",
     "prod": "node server.js",
     "build": "webpack --config webpack.prod.config.js -p --progress --colors",
-    "postinstall": "webpack --config webpack.prod.config.js -p --progress --colors"
   },
   "author": "Colin Nash",
   "license": "ISC",
