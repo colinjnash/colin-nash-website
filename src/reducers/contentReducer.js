@@ -22,6 +22,7 @@ const contentReducer  = (state = initialState, action) => {
 				lang:'FR'			
 			};	
 		}
+	
 	default:
 		return state;
 	}

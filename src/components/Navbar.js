@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavSpan, BurgerSpan, Nav, Link } from '../styles/styles';
+import { NavSpan, BurgerUl, Nav, NavDiv, MenuLine } from '../styles/styles';
 
 const Navbar = (props) => {
 
@@ -19,6 +19,8 @@ const Navbar = (props) => {
 		return arr.map((item, i) => 
 			<NavSpan
 				key={i}
+				onClick = {(event) => props.changeDisplay(event)}
+				title={item}
 			>
 				{item}
 			</NavSpan>  
@@ -28,17 +30,41 @@ const Navbar = (props) => {
 	if (props.eng) {
 		return (
 			<Nav>
-				<BurgerSpan>
+				<NavDiv
+					onClick = {() => props.toggleNav(props.nav)}
+				>
+					<MenuLine
+						nav = {props.nav}
+					/>
+					<MenuLine
+						nav = {props.nav}
+					/>
+					<MenuLine
+						nav = {props.nav}
+					/>
+				</NavDiv>
+				<BurgerUl
+					nav = {props.nav}
+				>
 					{renderBurger(navlist.english)}
-				</BurgerSpan>
+				</BurgerUl>
 			</Nav>
 		);
 	} else {
 		return (
 			<Nav>
-				<BurgerSpan>
+				<NavDiv
+					onClick = {props.toggleNav}
+				>
+					<MenuLine/>
+					<MenuLine/>
+					<MenuLine/>
+				</NavDiv>
+				<BurgerUl
+					nav = {props.nav}
+				>
 					{renderBurger(navlist.french)}
-				</BurgerSpan>
+				</BurgerUl>
 			</Nav>
 		);
 	}

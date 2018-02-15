@@ -1,13 +1,18 @@
 import React from 'react';
-import {ArticleImg, ImgDiv} from '../styles/styles';
+import {Article, Profile} from '../styles/styles';
 
 const MainArticle = (props) => {
 
-	return (
-		<ImgDiv>
-			<ArticleImg src={require('../assets/Greenland.jpg')} />
-		</ImgDiv>
-	);
+	if (props.display == 'Home') {
+
+		return (
+			<Article>
+				<Profile src={require('../assets/Profile_Main.png')} />
+			</Article>
+		);
+	}
+	return null;
+
 };
 
 export default MainArticle;

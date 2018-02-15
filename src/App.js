@@ -24,8 +24,10 @@ class App extends Component {
 				<NavbarWrap>
 					<Navbar
 						navlist = {this.state.Navbar}
-					
+						toggleNav = {this.props.toggleNav}
+						nav = {this.props.nav}
 						eng = {this.props.eng}
+						changeDisplay = {this.props.changeDisplay}
 					/>
 					<LangWrap
 						english = {this.props.english}
@@ -34,6 +36,9 @@ class App extends Component {
 						{this.props.lang}
 					</LangWrap>
 				</NavbarWrap>
+				<MainArticle
+					display = {this.props.displayTitle}
+				/>
 			</Container>
 		);
 	}
@@ -42,7 +47,11 @@ class App extends Component {
 App.propTypes = {
 	english: PropTypes.func,
 	eng: PropTypes.bool,
-	lang: PropTypes.string
+	lang: PropTypes.string,
+	toggleNav: PropTypes.func,
+	displayTitle: PropTypes.string,
+	nav: PropTypes.bool,
+	changeDisplay: PropTypes.func
 
 };
 
@@ -50,13 +59,17 @@ const mapStateToProps = state => {
 	return {
 		content: state.lang.content,
 		eng: state.lang.isEnglish,
-		lang: state.lang.lang
+		lang: state.lang.lang,
+		nav: state.pres.dropdownNav,
+		displayTitle: state.pres.displayTitle
 	};
 };
 
 const mapDispatchToProps = dispatch => {
 	return  {
-		english: (eng) => dispatch({type:actionTypes.ENGLISH, value: !eng})
+		english: (eng) => dispatch({type:actionTypes.ENGLISH, value: !eng}),
+		toggleNav: (nav) => dispatch({type:actionTypes.TOGGLE_NAV, value: !nav}),
+		changeDisplay: (event) => dispatch({type:actionTypes.CHANGE_DISPLAY, value: event.currentTarget.title})
 	};
 };
 
