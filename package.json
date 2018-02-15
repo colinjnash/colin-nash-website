@@ -15,6 +15,7 @@
     "url": "https://github.com/colinjnash/colin-nash-website.git"
   },
   "dependencies": {
+    "express": "^4.16.2",
     "path": "^0.12.7",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
