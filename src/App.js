@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { NavbarWrap } from './styles/styles';
-import Navbar from './Navbar';
-import { injectGlobal } from 'styled-components';
+import { NavbarWrap, LangWrap, Container } from './styles/styles';
+import Navbar from './components/Navbar';
+import PropTypes from 'prop-types';
+import MainArticle from './components/MainArticle';
+
 import { connect } from 'react-redux';
 import * as actionTypes from './actions/actionTypes';
 
@@ -9,33 +11,65 @@ class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state= {
-			Navbar: ['Home', 'About', 'Portfolio', 'Contact']
+			Navbar: {
+				english: ['Home', 'About', 'Portfolio', 'Contact'],
+				french: ['Accueil', 'À Propos', 'Réalisations', 'Contact']
+			},
 		};
 	}
 
 	render() {
 		return (
-			<NavbarWrap>
-				<Navbar
-					navlist = {this.state.Navbar}
-					english = {this.props.english}
-					eng = {this.props.eng}
+			<Container>
+				<NavbarWrap>
+					<Navbar
+						navlist = {this.state.Navbar}
+						toggleNav = {this.props.toggleNav}
+						nav = {this.props.nav}
+						eng = {this.props.eng}
+						changeDisplay = {this.props.changeDisplay}
+					/>
+					<LangWrap
+						english = {this.props.english}
+						onClick={() => this.props.english(this.props.eng)}
+					>
+						{this.props.lang}
+					</LangWrap>
+				</NavbarWrap>
+				<MainArticle
+					display = {this.props.displayTitle}
 				/>
-			</NavbarWrap>
+			</Container>
 		);
 	}
 }
 
+App.propTypes = {
+	english: PropTypes.func,
+	eng: PropTypes.bool,
+	lang: PropTypes.string,
+	toggleNav: PropTypes.func,
+	displayTitle: PropTypes.string,
+	nav: PropTypes.bool,
+	changeDisplay: PropTypes.func
+
+};
+
 const mapStateToProps = state => {
 	return {
 		content: state.lang.content,
-		eng: state.lang.isEnglish
+		eng: state.lang.isEnglish,
+		lang: state.lang.lang,
+		nav: state.pres.dropdownNav,
+		displayTitle: state.pres.displayTitle
 	};
 };
 
 const mapDispatchToProps = dispatch => {
 	return  {
-		english: (eng) => dispatch({type:actionTypes.ENGLISH, value: !eng})
+		english: (eng) => dispatch({type:actionTypes.ENGLISH, value: !eng}),
+		toggleNav: (nav) => dispatch({type:actionTypes.TOGGLE_NAV, value: !nav}),
+		changeDisplay: (event) => dispatch({type:actionTypes.CHANGE_DISPLAY, value: event.currentTarget.title})
 	};
 };
 

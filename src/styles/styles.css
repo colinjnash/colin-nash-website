@@ -1,9 +1,22 @@
-/* @font-face {
-    font-family: 'Operator Mono';
-    src: url('../fonts/Operator-Mono.ttf');
-  }
-*/
+@font-face {
+  font-family: 'circular';
+  src:  url('fonts/circular/CircularStd-Book.eot') format('embedded-opentype'),
+    url('fonts/circular/CircularStd-Book.ttf') format('truetype'),
+    url('fonts/circular/CircularStd-Book.woff') format('woff'),
+    url('fonts/circular/CircularStd-Book.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+	    width:100%;
+	    -webkit-font-smoothing: antialiased;
+}
   body {
-  	font-family: 'Operator Mono';
+  	font-family: 'circular', sans-serif;
     margin: 0;
+    width:100%;
   }

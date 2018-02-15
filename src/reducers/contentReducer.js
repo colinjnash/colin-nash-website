@@ -2,7 +2,8 @@ import * as actionTypes from '../actions/actionTypes';
 
 const initialState = {
 	content: [],
-	isEnglish: true
+	isEnglish: true,
+	lang:'FR' 
 };
 
 const contentReducer  = (state = initialState, action) => {
@@ -10,10 +11,18 @@ const contentReducer  = (state = initialState, action) => {
 	case actionTypes.ENGLISH: 
 		console.log('[Language Setting:English]');
 		console.log(action.value);
-		return {
-			...state,
-			isEnglish: action.value
+		if (state.lang == 'FR') {
+			return {		...state,
+				isEnglish: action.value,
+				lang:'EN'		};
+		} else {
+			return {
+				...state,
+				isEnglish: action.value,
+				lang:'FR'			
+			};	
 		}
+	
 	default:
 		return state;
 	}
