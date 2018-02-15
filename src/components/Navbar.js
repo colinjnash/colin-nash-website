@@ -1,32 +1,45 @@
 import React from 'react';
-import { NavSpan } from '../styles/styles';
+import { NavSpan, BurgerSpan, Nav, Link } from '../styles/styles';
 
 const Navbar = (props) => {
 
 	let navlist = props.navlist;
 
-	const renderNavbar = (arr) => {
+	// const renderNavbar = (arr) => {
+	// 	return arr.map((item, i) => 
+	// 		<NavSpan key={i}
+	// 		>
+	// 			{item}  
+	// 		</NavSpan>
+	// 	);
+	// };
+
+
+	const renderBurger = (arr) => {
 		return arr.map((item, i) => 
-			<NavSpan key={i}
+			<NavSpan
+				key={i}
 			>
-				{item}  
-			</NavSpan>
+				{item}
+			</NavSpan>  
 		);
 	};
 
 	if (props.eng) {
 		return (
-			<span>
-				<span >Colin Nash</span>
-				{renderNavbar(navlist.english)}
-			</span>
+			<Nav>
+				<BurgerSpan>
+					{renderBurger(navlist.english)}
+				</BurgerSpan>
+			</Nav>
 		);
 	} else {
 		return (
-			<span>
-				<span>Colin Nash</span>
-				{renderNavbar(navlist.french)}
-			</span>
+			<Nav>
+				<BurgerSpan>
+					{renderBurger(navlist.french)}
+				</BurgerSpan>
+			</Nav>
 		);
 	}
 
