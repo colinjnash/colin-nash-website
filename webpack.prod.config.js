@@ -4,7 +4,7 @@ var path = require('path');
 
 module.exports = {
 	output: {
-		path: '/src',
+		path: path.resolve(__dirname,'build'),
 		publicPath: '/',
 		filename: 'bundle.js'
 	},
@@ -25,7 +25,7 @@ module.exports = {
 					loader: 'url-loader',
 					options: { 
 						limit: 8000, // Convert images < 8kb to base64 strings
-						name: 'images/[hash]-[name].[ext]'
+						name: 'assets/images/[hash]-[name].[ext]'
 					} 
 				}]
 			},
