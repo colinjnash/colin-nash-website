@@ -20,24 +20,31 @@ class App extends Component {
 
 	render() {
 		return (
-			<Container>
-				<NavbarWrap>
+			<Container
+				display = {this.props.displayTitle}
+			>
+				<NavbarWrap
+				display = {this.props.displayTitle}
+				>
 					<Navbar
 						navlist = {this.state.Navbar}
 						toggleNav = {this.props.toggleNav}
 						nav = {this.props.nav}
 						eng = {this.props.eng}
 						changeDisplay = {this.props.changeDisplay}
+						display = {this.props.displayTitle}
 					/>
 					<LangWrap
 						english = {this.props.english}
 						onClick={() => this.props.english(this.props.eng)}
+						display = {this.props.displayTitle}
 					>
 						{this.props.lang}
 					</LangWrap>
 				</NavbarWrap>
 				<MainArticle
 					display = {this.props.displayTitle}
+					eng = {this.props.eng}
 				/>
 			</Container>
 		);

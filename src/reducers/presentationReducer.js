@@ -16,6 +16,7 @@ const presentationReducer = (state = initialState, action) => {
 		};
 	case actionTypes.CHANGE_DISPLAY:
 		console.log('[CHANGE DISPLAY]');
+		console.log(action.value);
 		return {
 			...state,
 			displayTitle: action.value

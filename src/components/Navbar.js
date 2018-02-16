@@ -21,6 +21,7 @@ const Navbar = (props) => {
 				key={i}
 				onClick = {(event) => props.changeDisplay(event)}
 				title={item}
+				display = {props.display}
 			>
 				{item}
 			</NavSpan>  
@@ -35,12 +36,15 @@ const Navbar = (props) => {
 				>
 					<MenuLine
 						nav = {props.nav}
+						display = {props.display}
 					/>
 					<MenuLine
 						nav = {props.nav}
+						display = {props.display}
 					/>
 					<MenuLine
 						nav = {props.nav}
+						display = {props.display}
 					/>
 				</NavDiv>
 				<BurgerUl
@@ -55,10 +59,17 @@ const Navbar = (props) => {
 			<Nav>
 				<NavDiv
 					onClick = {props.toggleNav}
+					display = {props.display}
 				>
-					<MenuLine/>
-					<MenuLine/>
-					<MenuLine/>
+					<MenuLine
+						display = {props.display}
+					/>
+					<MenuLine
+						display = {props.display}
+					/>
+					<MenuLine
+						display = {props.display}
+					/>
 				</NavDiv>
 				<BurgerUl
 					nav = {props.nav}

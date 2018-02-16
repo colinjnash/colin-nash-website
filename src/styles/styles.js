@@ -1,5 +1,6 @@
 import styled, { css, keyframes } from 'styled-components';
 import bgimage from '../assets/Greenland.jpg';
+import cover from '../assets/About_Cover.png';
 
 
 
@@ -7,7 +8,7 @@ export const slideIn = keyframes`
    from {
     opacity: 0;background: rgba(0,0,0,0);
     to {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.3);
   }
   `;
 
@@ -17,13 +18,47 @@ height: auto;
 width: auto;
 opacity: 1;
 margin: 5%;
+margin-left: 10%;
+float: left;
+display: inline;
+position: relative;
+@media (max-width: 770px) {
+  padding: 50px;
+  border-radius: 200px;
+  float:none;
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+  opacity: 1;
+}
+`;
+
+export const Nav= styled.nav`
+display: inline;
+max-width: 80%;
 `;
 
 
 export const Container = styled.div`
 width: 100%;
 height: 1000px;
-background-image: url(${bgimage});
+-webkit-transition: background-image 0.2s ease-in-out;
+transition: background-image 0.2s ease-in-out;
+  ${props => props.display == 'Home' && css `
+  -webkit-transition: background-image 0.2s ease-in-out;
+transition: background-image 0.2s ease-in-out;
+  background-image: url(${bgimage});
+position: fixed;
+background-size: cover;
+  `};
+  ${props => props.display == 'About' && css `
+  -webkit-transition: background-image 0.2s ease-in-out;
+transition: background-image 0.2s ease-in-out;
+  background-image: url(${cover});
+position: fixed;
+background-size: cover;
+  `};
+
 `;
 
 export const NavbarWrap = styled.div`
@@ -31,6 +66,11 @@ border-bottom: 1px solid #ededed;
 background: transparent;
 padding: 30px;
 min-height: 30px;
+  ${props => props.display == 'About' && css `
+  transition: all 1s;
+  color: #0e0b0d;
+  border-bottom: 1px solid #0e0b0d;
+  `};
 
 @media (max-width: 700px) {
 border-bottom: none;
@@ -41,14 +81,13 @@ export const Article = styled.div`
 margin: 40px 10%;
 width: 80%;
 height: 60%;
-background: rgba(0,0,0,0.5);
+background: rgba(0,0,0,0.3);
 color: white;
-animation: ${slideIn} 2s linear;
+animation: ${slideIn} 700ms linear;
 @media (max-width: 700px) {
 border-bottom: none;
-background: black;
-animation: ${slideIn} 2s linear;
-opacity: 0.5;
+background: rgba(0,0,0,0.3);
+animation: ${slideIn} 700ms linear;
 margin-top: 35%;
 margin-left: auto;
 margin-right: auto;
@@ -90,7 +129,19 @@ float: right;
 	  top: 20px;
     right: 0;
     height: 40px;
+
+    // About color 0e0b0d
 }
+${props => props.display == 'About' && css` 
+transition: all 1s;
+color: #0e0b0d;
+border: 1px solid #0e0b0d;
+&:hover {
+  color: white;
+  background: #0e0b0d;
+  transition: all 700ms;
+}
+`}
 `;
 
 export const BurgerUl = styled.ul`
@@ -139,13 +190,58 @@ color: white;
   text-align: center;
   margin-bottom: 12px;
 }
+${props => props.display == 'About' && css` 
+transition: all 1s;
+color: #0e0b0d;
+border: 1px solid #0e0b0d;
+&:hover {
+  color: white;
+  background: #0e0b0d;
+  transition: all 700ms;
+}
+`}
 `;
 
-export const Nav= styled.nav`
-display: inline;
-max-width: 80%;
+export const Name = styled.h1`
+padding-top: 10%;
+font-weight: 200;
+font-size: 2em;
+position: flex;
+letter-spacing: 1px;
+vartical-align: top;
+text-align: center;
+
+@media (max-width: 770px) {
+  display: block;
+}
 `;
 
+export const Title = styled.h2`
+font-weight: 200;
+font-size: 2em;
+position: flex;
+letter-spacing: 1px;
+vartical-align: top;
+text-align: center;
+@media (max-width: 770px) {
+  display: block;
+  width: auto;
+  text-align: center;
+  margin-bottom: 12px;
+}
+`;
+
+export const Ahr = styled.hr`
+width: 40%;
+  border: 0; 
+  height: 1px; 
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+}
+
+`;
 
 export const MenuLine = styled.span`
  display: block;
@@ -153,17 +249,17 @@ export const MenuLine = styled.span`
   height: 2px;
   margin-bottom: 5px;
   position: relative;
-  
   background: #ededed;
   border-radius: 3px;
-  
   z-index: 1;
-  
   transform-origin: 4px 0px;
+  ${props => props.display == 'About' && css` 
+transition: all 1s;
+background: #0e0b0d;
+`}
   &:first-child(1)  ${props => props.nav == true && css `
    opacity: 1;
   transform: rotate(45deg) translate(-2px, 0px);
-  background: #ededed;
   `};
   &:nth-last-child(2){
     ${props => props.nav == true && css `
@@ -175,7 +271,6 @@ export const MenuLine = styled.span`
     ${props => props.nav == true && css `
       opacity: 1;
   transform: rotate(-45deg) translate(-2px, -2px);
-  background: #ededed;
   `};
   }
   
