@@ -7,6 +7,7 @@ const MainArticle = (props) => {
 
 	switch (props.display) {
 	case 'Home':
+	case 'Accueil':
 		if(props.eng) {
 			let english = home.english;
 			return (
@@ -34,6 +35,7 @@ const MainArticle = (props) => {
 
 		}
 	case 'About':
+	case'À Propos':
 		if(props.eng) {
 			return (
 				<Article>	

@@ -44,14 +44,14 @@ width: 100%;
 height: 1000px;
 -webkit-transition: background-image 0.2s ease-in-out;
 transition: background-image 0.2s ease-in-out;
-  ${props => props.display == 'Home' && css `
+  ${props => (props.display == 'Home' || props.display == 'Accueil') && css `
   -webkit-transition: background-image 0.2s ease-in-out;
 transition: background-image 0.2s ease-in-out;
   background-image: url(${bgimage});
 position: fixed;
 background-size: cover;
   `};
-  ${props => props.display == 'About' && css `
+  ${props => (props.display == 'About' || props.display == 'À Propos') && css `
   -webkit-transition: background-image 0.2s ease-in-out;
 transition: background-image 0.2s ease-in-out;
   background-image: url(${cover});
@@ -66,7 +66,7 @@ border-bottom: 1px solid #ededed;
 background: transparent;
 padding: 30px;
 min-height: 30px;
-  ${props => props.display == 'About' && css `
+  ${props => (props.display == 'About' || props.display == 'À Propos') && css `
   transition: all 1s;
   color: #0e0b0d;
   border-bottom: 1px solid #0e0b0d;
@@ -132,7 +132,7 @@ float: right;
 
     // About color 0e0b0d
 }
-${props => props.display == 'About' && css` 
+${props => (props.display == 'About' || props.display == 'À Propos')  && css` 
 transition: all 1s;
 color: #0e0b0d;
 border: 1px solid #0e0b0d;
@@ -190,7 +190,7 @@ color: white;
   text-align: center;
   margin-bottom: 12px;
 }
-${props => props.display == 'About' && css` 
+${props => (props.display == 'About' || props.display == 'À Propos')  && css` 
 transition: all 1s;
 color: #0e0b0d;
 border: 1px solid #0e0b0d;
@@ -253,7 +253,7 @@ export const MenuLine = styled.span`
   border-radius: 3px;
   z-index: 1;
   transform-origin: 4px 0px;
-  ${props => props.display == 'About' && css` 
+  ${props => (props.display == 'About' || props.display == 'À Propos')  && css` 
 transition: all 1s;
 background: #0e0b0d;
 `}
