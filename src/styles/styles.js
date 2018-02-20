@@ -1,7 +1,7 @@
 import styled, { css, keyframes } from 'styled-components';
 import bgimage from '../assets/Greenland.jpg';
 import cover from '../assets/About_Cover.png';
-
+import styles from './styles.css';
 
 
 export const slideIn = keyframes`
@@ -48,47 +48,48 @@ transition: background-image 0.2s ease-in-out;
   -webkit-transition: background-image 0.2s ease-in-out;
 transition: background-image 0.2s ease-in-out;
   background-image: url(${bgimage});
-position: fixed;
+position: relative;
 background-size: cover;
   `};
   ${props => (props.display == 'About' || props.display == 'À Propos') && css `
   -webkit-transition: background-image 0.2s ease-in-out;
 transition: background-image 0.2s ease-in-out;
   background-image: url(${cover});
-position: fixed;
+position: relative;
 background-size: cover;
   `};
 
 `;
 
 export const NavbarWrap = styled.div`
-border-bottom: 1px solid #ededed;
 background: transparent;
 padding: 30px;
 min-height: 30px;
+position:absolute;
+
+width: 95%;
   ${props => (props.display == 'About' || props.display == 'À Propos') && css `
   transition: all 1s;
   color: #0e0b0d;
-  border-bottom: 1px solid #0e0b0d;
   `};
 
 @media (max-width: 700px) {
-border-bottom: none;
+width: 82%;
 }
 `;
 
 export const Article = styled.div`
-margin: 40px 10%;
+margin: auto;
+padding-top: 150px;
 width: 80%;
-height: 60%;
-background: rgba(0,0,0,0.3);
-color: white;
+height: 80%;
+background: transparent;
 animation: ${slideIn} 700ms linear;
 @media (max-width: 700px) {
 border-bottom: none;
-background: rgba(0,0,0,0.3);
+background: transparent;
 animation: ${slideIn} 700ms linear;
-margin-top: 35%;
+padding-top: 35%;
 margin-left: auto;
 margin-right: auto;
 width: 90%;
@@ -125,6 +126,7 @@ color: white;
 }
 float: right;
 @media (max-width: 700px) {
+  margin-top: 0px;
 	position: absolute;
 	  top: 20px;
     right: 0;
@@ -151,8 +153,8 @@ max-width: 80%;
 @media (max-width: 700px) {
   position: absolute;
   display: block;
-margin-left: 0px;
-padding-left: 0px;
+  margin-left: 0px;
+  padding-left: 0px;
   transition: all 2s;
   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
   opacity: 1;
@@ -165,45 +167,49 @@ padding-left: 0px;
 `;
 
 export const NavSpan = styled.li`
-border: 1px solid #ededed;
+border-bottom: 1px solid #ededed;
 color: #ededed;
-height: 40px;
-margin-right: 20px;
-font-weight: 400;
+height: 30px;
 line-height: 38px;
 font-size: 16px;
+margin-right: 20px;
+font-weight: 400;
+line-height: 20px;
 touch-action: manipulation;
 cursor: pointer;
 padding: 0px 15px;
 display: inline-block;
 border-radius: 0px;
-margin-top: 5px;
+margin: 10px;
 color: white;
 &:hover {
   color: grey;
-  background: white;
-  transition: all 700ms;
+border-bottom: 5px solid #ededed;
+  transition: all 300ms;
 }
 @media (max-width: 700px) {
+  height: 22px;
+  margin-right: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  font-size: 12px;
+  touch-action: manipulation;
+  cursor: pointer;
+  padding: 0px 15px;
   display: block;
   width: auto;
   text-align: center;
   margin-bottom: 12px;
+  margin-right: 0px;
+  margin-left: -25px;
 }
 ${props => (props.display == 'About' || props.display == 'À Propos')  && css` 
 transition: all 1s;
 color: #0e0b0d;
-border: 1px solid #0e0b0d;
-&:hover {
-  color: white;
-  background: #0e0b0d;
-  transition: all 700ms;
-}
 `}
 `;
 
 export const Name = styled.h1`
-padding-top: 10%;
 font-weight: 200;
 font-size: 2em;
 position: flex;
