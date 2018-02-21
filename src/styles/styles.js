@@ -1,6 +1,7 @@
 import styled, { css, keyframes } from 'styled-components';
 import bgimage from '../assets/background-colin.png';
 import cover from '../assets/About_Cover.png';
+import contact from '../assets/Greenland.png'
 import portfolio from '../assets/portfolio-cover.png';
 import styles from './styles.css';
 
@@ -15,8 +16,8 @@ export const slideIn = keyframes`
 
 export const Profile = styled.img`
 border-radius: 150px;
-height: 150;
-width: 150;
+height: 150px;
+width: 150px;
 opacity: 1;
 margin: none;
 margin-left: 10%;
@@ -25,7 +26,8 @@ display: inline;
 position: relative;
 padding: 0px;
 @media (max-width: 770px) {
-  padding: 50px;
+  padding: 20px;
+  padding-bottom: 5px;
   border-radius: 200px;
   float:none;
   display: block;
@@ -43,34 +45,42 @@ max-width: 80%;
 
 export const Container = styled.div`
 width: 100%;
-height: 800px;
+height: 700px;
 
 `;
 
 export const Header = styled.div`
 width: 100%;
-height: 80%;
+height: 70%;
 -webkit-transition: background-image 0.2s ease-in-out;
-transition: background-image 0.2s ease-in-out;
+transition: background-image 300ms ease-in-out;
   ${props => (props.display == 'Home' || props.display == 'Accueil') && css `
-  -webkit-transition: background-image 0.2s ease-in-out;
-transition: background-image 0.2s ease-in-out;
+  -webkit-transition: background-image 0.2s ease-out;
+transition: background-image 300ms ease-out;
   background-image: url(${bgimage});
 position: relative;
 background-size: cover;
   `};
   ${props => (props.display == 'About' || props.display == 'À Propos') && css `
-  -webkit-transition: background-image 0.2s ease-in-out;
-transition: background-image 0.2s ease-in-out;
+  -webkit-transition: background-image 300ms ease-out;
+transition: background-image 300ms ease-out;
   background-image: url(${cover});
 position: relative;
 background-size: cover;
 
   `};
     ${props => (props.display == 'Portfolio' || props.display == 'Réalisations') && css `
+  -webkit-transition: background-image 300ms ease-out;
+transition: background-image 300ms ease-out;
+  background-image: url(${portfolio});
+position: relative;
+background-size: cover;
+
+  `};
+    ${props => (props.display == 'Contact') && css `
   -webkit-transition: background-image 0.2s ease-in-out;
 transition: background-image 0.2s ease-in-out;
-  background-image: url(${portfolio});
+  background-image: url(${contact});
 position: relative;
 background-size: cover;
 
@@ -102,7 +112,7 @@ width: 82%;
 export const Article = styled.div`
 margin: 0px auto;
 width: 100%;
-height: 80%;
+min-height: 200px;
 background: transparent;
 animation: ${slideIn} 700ms linear;
 @media (max-width: 700px) {
@@ -155,6 +165,16 @@ float: right;
     // About color 0e0b0d
 }
 ${props => (props.display == 'About' || props.display == 'À Propos')  && css` 
+transition: all 1s;
+color: #0e0b0d;
+border: 1px solid #0e0b0d;
+&:hover {
+  color: white;
+  background: #0e0b0d;
+  transition: all 700ms;
+}
+`}
+${props => (props.display == 'Portfolio' || props.display == 'Réalisations')  && css` 
 transition: all 1s;
 color: #0e0b0d;
 border: 1px solid #0e0b0d;
@@ -223,7 +243,17 @@ border-bottom: 5px solid #ededed;
   margin-right: 0px;
   margin-left: -25px;
 }
-${props => (props.display == 'About' || props.display == 'À Propos')  && css` 
+${props => (props.display == 'About' || props.display == 'À Propos') && css` 
+transition: all 1s;
+color: #0e0b0d;
+border-bottom: 1px solid #0e0b0d;
+&:hover {
+  color: grey;
+border-bottom: 5px solid #0e0b0d;
+  transition: all 300ms;
+}
+`}
+${props => (props.display == 'Portfolio' || props.display == 'Réalisations') && css` 
 transition: all 1s;
 color: #0e0b0d;
 border-bottom: 1px solid #0e0b0d;
@@ -236,16 +266,17 @@ border-bottom: 5px solid #0e0b0d;
 `;
 
 export const Name = styled.h1`
-padding-top: 5%;
+padding-top: 2%;
 font-weight: 200;
 font-size: 2em;
 position: flex;
 letter-spacing: 1px;
 vartical-align: top;
 text-align: center;
-
+margin-bottom: 1%;
 @media (max-width: 770px) {
   display: block;
+  padding-top: 0;
 }
 `;
 
@@ -253,6 +284,7 @@ export const Title = styled.h2`
 font-weight: 200;
 font-size: 2em;
 position: flex;
+margin-top: 1%;
 letter-spacing: 1px;
 vartical-align: top;
 text-align: center;
@@ -265,7 +297,7 @@ text-align: center;
 `;
 
 export const Ahr = styled.hr`
-width: 40%;
+width: auto;
   border: 0; 
   height: 1px; 
   background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
@@ -287,7 +319,11 @@ export const MenuLine = styled.span`
   border-radius: 3px;
   z-index: 1;
   transform-origin: 4px 0px;
-  ${props => (props.display == 'About' || props.display == 'À Propos')  && css` 
+  ${props => (props.display == 'About' || props.display == 'À Propos') && css` 
+transition: all 1s;
+background: #0e0b0d;
+`}
+${props => (props.display == 'Portfolio' || props.display == 'Réalisations') && css` 
 transition: all 1s;
 background: #0e0b0d;
 `}

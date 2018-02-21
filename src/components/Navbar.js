@@ -33,6 +33,7 @@ const Navbar = (props) => {
 			<Nav>
 				<NavDiv
 					onClick = {() => props.toggleNav(props.nav)}
+					display = {props.display}
 				>
 					<MenuLine
 						nav = {props.nav}
@@ -58,16 +59,19 @@ const Navbar = (props) => {
 		return (
 			<Nav>
 				<NavDiv
-					onClick = {props.toggleNav}
+					onClick = {() => props.toggleNav(props.nav)}
 					display = {props.display}
 				>
 					<MenuLine
+						nav = {props.nav}
 						display = {props.display}
 					/>
 					<MenuLine
+						nav = {props.nav}
 						display = {props.display}
 					/>
 					<MenuLine
+						nav = {props.nav}
 						display = {props.display}
 					/>
 				</NavDiv>
