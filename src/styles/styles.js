@@ -1,6 +1,7 @@
 import styled, { css, keyframes } from 'styled-components';
-import bgimage from '../assets/Greenland.jpg';
+import bgimage from '../assets/background-colin.png';
 import cover from '../assets/About_Cover.png';
+import portfolio from '../assets/portfolio-cover.png';
 import styles from './styles.css';
 
 
@@ -14,14 +15,15 @@ export const slideIn = keyframes`
 
 export const Profile = styled.img`
 border-radius: 150px;
-height: auto;
-width: auto;
+height: 150;
+width: 150;
 opacity: 1;
-margin: 5%;
+margin: none;
 margin-left: 10%;
 float: left;
 display: inline;
 position: relative;
+padding: 0px;
 @media (max-width: 770px) {
   padding: 50px;
   border-radius: 200px;
@@ -41,7 +43,13 @@ max-width: 80%;
 
 export const Container = styled.div`
 width: 100%;
-height: 1000px;
+height: 800px;
+
+`;
+
+export const Header = styled.div`
+width: 100%;
+height: 80%;
 -webkit-transition: background-image 0.2s ease-in-out;
 transition: background-image 0.2s ease-in-out;
   ${props => (props.display == 'Home' || props.display == 'Accueil') && css `
@@ -57,8 +65,21 @@ transition: background-image 0.2s ease-in-out;
   background-image: url(${cover});
 position: relative;
 background-size: cover;
-  `};
 
+  `};
+    ${props => (props.display == 'Portfolio' || props.display == 'Réalisations') && css `
+  -webkit-transition: background-image 0.2s ease-in-out;
+transition: background-image 0.2s ease-in-out;
+  background-image: url(${portfolio});
+position: relative;
+background-size: cover;
+
+  `};
+@media (max-width: 700px) {
+background-size: contain no-repeat;
+width:auto;
+height: 40%;
+}
 `;
 
 export const NavbarWrap = styled.div`
@@ -79,9 +100,8 @@ width: 82%;
 `;
 
 export const Article = styled.div`
-margin: auto;
-padding-top: 150px;
-width: 80%;
+margin: 0px auto;
+width: 100%;
 height: 80%;
 background: transparent;
 animation: ${slideIn} 700ms linear;
@@ -89,7 +109,7 @@ animation: ${slideIn} 700ms linear;
 border-bottom: none;
 background: transparent;
 animation: ${slideIn} 700ms linear;
-padding-top: 35%;
+padding-top: 5%;
 margin-left: auto;
 margin-right: auto;
 width: 90%;
@@ -206,10 +226,17 @@ border-bottom: 5px solid #ededed;
 ${props => (props.display == 'About' || props.display == 'À Propos')  && css` 
 transition: all 1s;
 color: #0e0b0d;
+border-bottom: 1px solid #0e0b0d;
+&:hover {
+  color: grey;
+border-bottom: 5px solid #0e0b0d;
+  transition: all 300ms;
+}
 `}
 `;
 
 export const Name = styled.h1`
+padding-top: 5%;
 font-weight: 200;
 font-size: 2em;
 position: flex;
@@ -245,6 +272,7 @@ width: 40%;
   background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
   background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
   background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+      position: inherit;
 }
 
 `;

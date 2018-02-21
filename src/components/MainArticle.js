@@ -1,6 +1,7 @@
 import React from 'react';
-import {Article, Profile, Name, Title, Ahr } from '../styles/styles';
 import { home } from '../static/ArticleText.js';
+import {Article, Profile, Name, Title, Ahr } from '../styles/styles';
+
 
 const MainArticle = (props) => {
 
