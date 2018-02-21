@@ -2,7 +2,7 @@ export const home = {
 
 	english: {
 		name: 'Colin Nash',
-		title:'Front-End Developer',
+		title:'Front End Developer',
 		content: 'Building responsive, lean applications and delivering a functional and engaging user experience'
 	},
 	french: {
@@ -22,6 +22,24 @@ export const about = {
 		p3:'After years of overseas conflict zone work, I finally decided to devote my time to another passion: Web Development. I found that adventure doesn\'t have to be in some far away place, and that changing the way people can look at the world can be done from my desktop with a few lines of code.'
 	},
 	french: {
-		content: ''
+		title1: 'À Propos'
 	}
 };
+
+export const portfolio = {
+	english: {
+			title1: 'Portfolio',
+		},
+		french: {
+		title1: 'Réalisations'
+	}
+}
+
+export const contact = {
+	english: {
+			title1: 'Contact',
+		},
+		french: {
+		title1: 'Contact'
+	}	
+}

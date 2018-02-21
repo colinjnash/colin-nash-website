@@ -1,6 +1,6 @@
 import React from 'react';
-import { home } from '../static/ArticleText.js';
-import {Article, Profile, Name, Title, Ahr } from '../styles/styles';
+import { home , about , portfolio, contact } from '../static/ArticleText.js';
+import {Article , Profile, Name, Title, Ahr } from '../styles/styles';
 
 
 const MainArticle = (props) => {
@@ -38,18 +38,53 @@ const MainArticle = (props) => {
 	case 'About':
 	case'À Propos':
 		if(props.eng) {
+			let english = about.english;
 			return (
 				<Article>	
+				<Title>{english.title1}</Title>
 				</Article>
 			);
 		} else if (!props.eng) {
+			let french = about.french;
 			return (
-				<Article>	
+				<Article>
+				<Title>{french.title1}</Title>	
 				</Article>
 			);
-
 		}
-
+		case 'Portfolio':
+		case 'Réalisations':
+		if(props.eng) {
+			let english = portfolio.english
+			return (
+				<Article>
+				<Title>{english.title1}</Title>	
+				</Article>
+			);
+		} else if (!props.eng) {
+			let french = portfolio.french
+			return (
+				<Article>	
+							<Title>{french.title1}</Title>	
+				</Article>
+			);
+		}
+		case 'Contact':
+		if(props.eng) {
+			let english = contact.english;
+					return (
+						<Article>
+						<Title>{english.title1}</Title>
+						</Article>
+					);
+				} else if (!props.eng) {
+			let french = contact.french;
+					return (
+						<Article>	
+						<Title>{french.title1}</Title>
+						</Article>
+					);
+				}		
 	default:
 		return null;
 	}
