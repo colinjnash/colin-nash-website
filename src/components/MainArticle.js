@@ -1,6 +1,7 @@
 import React from 'react';
 import { home , about , portfolio, contact } from '../static/ArticleText.js';
 import {Article , Profile, Name, Title, Ahr, ArticleWrap } from '../styles/styles';
+import {ArticleTitle} from '../styles/AboutStyles';
 
 
 const MainArticle = (props) => {
@@ -15,11 +16,11 @@ const MainArticle = (props) => {
 				<Article>	
 					<Profile src={require('../assets/Profile_Main.png')} />
 					<ArticleWrap>
-					<Name>
-						{english.name}
-					</Name>
-					<Ahr/>
-					<Title>{english.title}</Title>
+						<Name>
+							{english.name}
+						</Name>
+						<Ahr/>
+						<Title>{english.title}</Title>
 					</ArticleWrap>
 				</Article>
 			);
@@ -29,11 +30,11 @@ const MainArticle = (props) => {
 				<Article>
 					<Profile src={require('../assets/Profile_Main.png')} />		
 					<ArticleWrap>
-					<Name>
-						{french.name}
-					</Name>
-					<Ahr/>
-					<Title>{french.title}</Title>
+						<Name>
+							{french.name}
+						</Name>
+						<Ahr/>
+						<Title>{french.title}</Title>
 					</ArticleWrap>
 				</Article>
 			);
@@ -45,50 +46,50 @@ const MainArticle = (props) => {
 			let english = about.english;
 			return (
 				<Article>	
-				<Title>{english.title1}</Title>
+					<ArticleTitle>{english.title1}</ArticleTitle>
 				</Article>
 			);
 		} else if (!props.eng) {
 			let french = about.french;
 			return (
 				<Article>
-				<Title>{french.title1}</Title>	
+					<ArticleTitle>{french.title1}</ArticleTitle>	
 				</Article>
 			);
 		}
-		case 'Portfolio':
-		case 'Réalisations':
+	case 'Portfolio':
+	case 'Réalisations':
 		if(props.eng) {
 			let english = portfolio.english
 			return (
 				<Article>
-				<Title>{english.title1}</Title>	
+					<ArticleTitle>{english.title1}</ArticleTitle>	
 				</Article>
 			);
 		} else if (!props.eng) {
 			let french = portfolio.french
 			return (
 				<Article>	
-							<Title>{french.title1}</Title>	
+					<ArticleTitle>{french.title1}</ArticleTitle>	
 				</Article>
 			);
 		}
-		case 'Contact':
+	case 'Contact':
 		if(props.eng) {
 			let english = contact.english;
-					return (
-						<Article>
-						<Title>{english.title1}</Title>
-						</Article>
-					);
-				} else if (!props.eng) {
+			return (
+				<Article>
+					<ArticleTitle>{english.title1}</ArticleTitle>
+				</Article>
+			);
+		} else if (!props.eng) {
 			let french = contact.french;
-					return (
-						<Article>	
-						<Title>{french.title1}</Title>
-						</Article>
-					);
-				}		
+			return (
+				<Article>	
+					<ArticleTitle>{french.title1}</ArticleTitle>
+				</Article>
+			);
+		}		
 	default:
 		return null;
 	}

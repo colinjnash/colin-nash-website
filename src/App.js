@@ -23,6 +23,7 @@ class App extends Component {
 			<Container>
 				<Header
 					display = {this.props.displayTitle}
+					nav = {this.props.nav}
 				>
 					<NavbarWrap
 						display = {this.props.displayTitle}

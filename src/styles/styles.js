@@ -3,7 +3,7 @@ import bgimage from '../assets/background-colin.png';
 import cover from '../assets/About_Cover.png';
 import contact from '../assets/Greenland.png';
 import portfolio from '../assets/portfolio-cover.png';
-
+import styles from './styles.css';
 
 
 export const slideIn = keyframes`
@@ -19,20 +19,13 @@ border-radius: 150px;
 height: 200px;
 width: 200px;
 opacity: 1;
-margin: none;
-margin: auto;
+margin: 40px;
 display: grid;
 grid-column: 1;
-grid-row: 1/3
-display: inline;
-position: relative;
-padding: 0px;
-@media (max-width: 770px) {
+@media (max-width: 800px) {
   padding: 5px;
   border-radius: 200px;
-  display: block;
-  margin-left:auto;
-  margin-right:auto;
+  margin: 3% auto;
   opacity: 1;
 }
 `;
@@ -87,6 +80,12 @@ position: relative;
 background-size: cover;
 
   `};
+
+  ${props => props.nav == true && css `
+  -webkit-filter: grayscale(100%);
+         filter: gray;
+
+    `};
 @media (max-width: 700px) {
 background-size: contain no-repeat;
 width:auto;
@@ -104,11 +103,10 @@ grid-template-columns: 2fr 4fr 2fr;
 grid-template-rows: auto
 background: transparent;
 animation: ${slideIn} 700ms linear;
-@media (max-width: 700px) {
+@media (max-width: 800px) {
 border-bottom: none;
 background: transparent;
 animation: ${slideIn} 700ms linear;
-padding-top: 5%;
 margin-left: auto;
 margin-right: auto;
 width: 90%;
@@ -240,16 +238,16 @@ border-radius: 0px;
 margin: 10px;
 color: white;
 &:hover {
-  color: grey;
 border-bottom: 5px solid #ededed;
   transition: all 300ms;
 }
 @media (max-width: 700px) {
   height: 22px;
   margin-right: 20px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 20px;
-  font-size: 12px;
+  font-size: 15px;
+  font-weight: 200;
   touch-action: manipulation;
   cursor: pointer;
   padding: 0px 15px;
@@ -259,41 +257,48 @@ border-bottom: 5px solid #ededed;
   margin-bottom: 12px;
   margin-right: 0px;
   margin-left: -25px;
+  &:hover {
+border-bottom: 1px solid #2e2e2e;
+  transition: all 100ms;
+}
 }
 ${props => (props.display == 'About' || props.display == 'À Propos') && css` 
 transition: all 1s;
 color: #0e0b0d;
-border-bottom: 1px solid #0e0b0d;
-&:hover {
-  color: grey;
-border-bottom: 5px solid #0e0b0d;
+border-bottom: 1px solid #2e2e2e;
+ &:hover {
+border-bottom: 5px solid #2e2e2e;
+  transition: all 100ms;
+}
+@media (max-width: 700px) {
+color: white;
+border-bottom: 1px solid #ededed;
+  &:hover {
+border-bottom: 1px solid #2e2e2e;
   transition: all 300ms;
+}
 }
 `}
 ${props => (props.display == 'Portfolio' || props.display == 'Réalisations') && css` 
 transition: all 1s;
 color: #0e0b0d;
-border-bottom: 1px solid #0e0b0d;
-&:hover {
-  color: grey;
-border-bottom: 5px solid #0e0b0d;
-  transition: all 300ms;
+border-bottom: 1px solid #2e2e2e;
+@media (max-width: 700px) {
+color: #2e2e2e;
 }
 `}
 `;
 
 export const Name = styled.h1`
-display: grid;
-grid-column: 2/3;
-grid-row: 1;
 font-weight: 200;
 font-size: 2em;
 letter-spacing: 1px;
 vartical-align: top;
 text-align: center;
 margin-bottom: 3%;
-padding-top: 8%;
-@media (max-width: 770px) {
+padding-top: 40px;
+color: #2e2e2e;
+@media (max-width: 700px) {
   display: block;
   padding-top: 0;
   margin-top: 2%;
@@ -302,8 +307,6 @@ padding-top: 8%;
 
 export const Title = styled.h2`
 display: grid;
-grid-column: 2;
-grid-row: 2;
 font-weight: 200;
 font-size: 2em;
 position: flex;
@@ -312,7 +315,8 @@ letter-spacing: 1px;
 vertical-align: top;
 text-align: center;
 margin: 2%;
-@media (max-width: 770px) {
+color: #2e2e2e;
+@media (max-width: 800px) {
   display: block;
   width: auto;
   text-align: center;
@@ -321,7 +325,7 @@ margin: 2%;
 `;
 
 export const Ahr = styled.hr`
-width: auto;
+width: 90%;
   border: 0; 
   height: 1px; 
   background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
@@ -345,11 +349,11 @@ export const MenuLine = styled.span`
   transform-origin: 4px 0px;
   ${props => (props.display == 'About' || props.display == 'À Propos') && css` 
 transition: all 1s;
-background: #0e0b0d;
+background: #2e2e2e;
 `}
 ${props => (props.display == 'Portfolio' || props.display == 'Réalisations') && css` 
 transition: all 1s;
-background: #0e0b0d;
+background: #2e2e2e;
 `}
   &:first-child(1)  ${props => props.nav == true && css `
    opacity: 1;
