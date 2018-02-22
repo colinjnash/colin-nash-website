@@ -1,9 +1,9 @@
 import styled, { css, keyframes } from 'styled-components';
 import bgimage from '../assets/background-colin.png';
 import cover from '../assets/About_Cover.png';
-import contact from '../assets/Greenland.png'
+import contact from '../assets/Greenland.png';
 import portfolio from '../assets/portfolio-cover.png';
-import styles from './styles.css';
+
 
 
 export const slideIn = keyframes`
@@ -16,20 +16,20 @@ export const slideIn = keyframes`
 
 export const Profile = styled.img`
 border-radius: 150px;
-height: 150px;
-width: 150px;
+height: 200px;
+width: 200px;
 opacity: 1;
 margin: none;
-margin-left: 10%;
-float: left;
+margin: auto;
+display: grid;
+grid-column: 1;
+grid-row: 1/3
 display: inline;
 position: relative;
 padding: 0px;
 @media (max-width: 770px) {
-  padding: 20px;
-  padding-bottom: 5px;
+  padding: 5px;
   border-radius: 200px;
-  float:none;
   display: block;
   margin-left:auto;
   margin-right:auto;
@@ -46,7 +46,9 @@ max-width: 80%;
 export const Container = styled.div`
 width: 100%;
 height: 700px;
-
+@media (max-width: 700px) {
+height: 600px;
+}
 `;
 
 export const Header = styled.div`
@@ -92,6 +94,40 @@ height: 40%;
 }
 `;
 
+
+export const Article = styled.div`
+margin: 0px auto;
+width: 100%;
+height: auto;
+display: grid;
+grid-template-columns: 2fr 4fr 2fr;
+grid-template-rows: auto
+background: transparent;
+animation: ${slideIn} 700ms linear;
+@media (max-width: 700px) {
+border-bottom: none;
+background: transparent;
+animation: ${slideIn} 700ms linear;
+padding-top: 5%;
+margin-left: auto;
+margin-right: auto;
+width: 90%;
+grid-template-columns: auto;
+grid-template-rows: auto
+}
+
+`;
+
+export const ArticleWrap = styled.div`
+grid-row: 1;
+grid-column: 2/3;
+;
+@media (max-width: 700px) {
+grid-row: 2;
+grid-column: auto;
+}
+`;
+
 export const NavbarWrap = styled.div`
 background: transparent;
 padding: 30px;
@@ -108,25 +144,6 @@ width: 95%;
 width: 82%;
 }
 `;
-
-export const Article = styled.div`
-margin: 0px auto;
-width: 100%;
-min-height: 200px;
-background: transparent;
-animation: ${slideIn} 700ms linear;
-@media (max-width: 700px) {
-border-bottom: none;
-background: transparent;
-animation: ${slideIn} 700ms linear;
-padding-top: 5%;
-margin-left: auto;
-margin-right: auto;
-width: 90%;
-}
-
-`;
-
 
 export const NavDiv = styled.div`
 display: none;
@@ -266,28 +283,35 @@ border-bottom: 5px solid #0e0b0d;
 `;
 
 export const Name = styled.h1`
-padding-top: 2%;
+display: grid;
+grid-column: 2/3;
+grid-row: 1;
 font-weight: 200;
 font-size: 2em;
-position: flex;
 letter-spacing: 1px;
 vartical-align: top;
 text-align: center;
-margin-bottom: 1%;
+margin-bottom: 3%;
+padding-top: 8%;
 @media (max-width: 770px) {
   display: block;
   padding-top: 0;
+  margin-top: 2%;
 }
 `;
 
 export const Title = styled.h2`
+display: grid;
+grid-column: 2;
+grid-row: 2;
 font-weight: 200;
 font-size: 2em;
 position: flex;
-margin-top: 1%;
+margin-top: 10%;
 letter-spacing: 1px;
-vartical-align: top;
+vertical-align: top;
 text-align: center;
+margin: 2%;
 @media (max-width: 770px) {
   display: block;
   width: auto;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { home , about , portfolio, contact } from '../static/ArticleText.js';
-import {Article , Profile, Name, Title, Ahr } from '../styles/styles';
+import {Article , Profile, Name, Title, Ahr, ArticleWrap } from '../styles/styles';
 
 
 const MainArticle = (props) => {
@@ -14,11 +14,13 @@ const MainArticle = (props) => {
 			return (
 				<Article>	
 					<Profile src={require('../assets/Profile_Main.png')} />
+					<ArticleWrap>
 					<Name>
 						{english.name}
 					</Name>
 					<Ahr/>
 					<Title>{english.title}</Title>
+					</ArticleWrap>
 				</Article>
 			);
 		} else if (!props.eng) {
@@ -26,11 +28,13 @@ const MainArticle = (props) => {
 			return (
 				<Article>
 					<Profile src={require('../assets/Profile_Main.png')} />		
+					<ArticleWrap>
 					<Name>
 						{french.name}
 					</Name>
 					<Ahr/>
 					<Title>{french.title}</Title>
+					</ArticleWrap>
 				</Article>
 			);
 
