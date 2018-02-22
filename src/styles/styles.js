@@ -51,7 +51,7 @@ height: 700px;
 
 export const Header = styled.div`
 width: 100%;
-height: 70%;
+height: 95%;
 -webkit-transition: background-image 0.2s ease-in-out;
 transition: background-image 300ms ease-in-out;
   ${props => (props.display == 'Home' || props.display == 'Accueil') && css `
