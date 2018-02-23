@@ -47,11 +47,11 @@ const MainArticle = (props) => {
 			return (
 				<Article>	
 					<ArticleTitle>{english.title1}</ArticleTitle>
-					<AboutImg1 src={require('../assets/about/kilimanjaro.jpg')}/>
+					<AboutImg1 src={require('../assets/kilimanjaro.jpg')}/>
 					<AboutP1>{english.p1}</AboutP1>
 					<AboutP2>{english.p2}</AboutP2>
-					<AboutImg2 src={require('../assets/about/kalemie.jpg')}/>
-					<AboutImg3 src={require('../assets/about/greenland_about.jpg')}/>
+					<AboutImg2 src={require('../assets/kalemie.jpg')}/>
+					<AboutImg3 src={require('../assets/greenland_about.jpg')}/>
 					<AboutP3>{english.p3}</AboutP3>
 				</Article>
 			);
@@ -66,14 +66,14 @@ const MainArticle = (props) => {
 	case 'Portfolio':
 	case 'Réalisations':
 		if(props.eng) {
-			let english = portfolio.english
+			let english = portfolio.english;
 			return (
 				<Article>
 					<ArticleTitle>{english.title1}</ArticleTitle>	
 				</Article>
 			);
 		} else if (!props.eng) {
-			let french = portfolio.french
+			let french = portfolio.french;
 			return (
 				<Article>	
 					<ArticleTitle>{french.title1}</ArticleTitle>	
