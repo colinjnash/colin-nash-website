@@ -1,7 +1,7 @@
 import React from 'react';
 import { home , about , portfolio, contact } from '../static/ArticleText.js';
 import {Article , Profile, Name, Title, Ahr, ArticleWrap } from '../styles/styles';
-import {ArticleTitle, AboutP1, AboutImg1, AboutImg2, AboutImg3, AboutP2, AboutP3} from '../styles/AboutStyles';
+import {ArticleTitle, AboutP1, AboutImg1, AboutImg2, AboutImg3, AboutP2, AboutP3} from '../styles/aboutStyles';
 
 
 const MainArticle = (props) => {
