@@ -100,7 +100,7 @@ width: 100%;
 height: auto;
 display: grid;
 grid-template-columns: 2fr 4fr 2fr;
-grid-template-rows: auto
+grid-template-rows: auto;
 background: transparent;
 animation: ${slideIn} 700ms linear;
 @media (max-width: 800px) {
@@ -118,7 +118,7 @@ grid-template-rows: auto
 
 export const ArticleWrap = styled.div`
 grid-row: 1;
-grid-column: 2/3;
+grid-column: 2/4;
 ;
 @media (max-width: 700px) {
 grid-row: 2;
