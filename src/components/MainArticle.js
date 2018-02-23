@@ -1,7 +1,7 @@
 import React from 'react';
 import { home , about , portfolio, contact } from '../static/ArticleText.js';
 import {Article , Profile, Name, Title, Ahr, ArticleWrap } from '../styles/styles';
-import {ArticleTitle} from '../styles/AboutStyles';
+import {ArticleTitle, AboutP1, AboutImg1, AboutImg2, AboutImg3, AboutP2, AboutP3} from '../styles/aboutStyles';
 
 
 const MainArticle = (props) => {
@@ -47,6 +47,12 @@ const MainArticle = (props) => {
 			return (
 				<Article>	
 					<ArticleTitle>{english.title1}</ArticleTitle>
+					<AboutImg1 src={require('../assets/kilimanjaro.jpg')}/>
+					<AboutP1>{english.p1}</AboutP1>
+					<AboutP2>{english.p2}</AboutP2>
+					<AboutImg2 src={require('../assets/kalemie.jpg')}/>
+					<AboutImg3 src={require('../assets/greenland_about.jpg')}/>
+					<AboutP3>{english.p3}</AboutP3>
 				</Article>
 			);
 		} else if (!props.eng) {
@@ -60,14 +66,14 @@ const MainArticle = (props) => {
 	case 'Portfolio':
 	case 'Réalisations':
 		if(props.eng) {
-			let english = portfolio.english
+			let english = portfolio.english;
 			return (
 				<Article>
 					<ArticleTitle>{english.title1}</ArticleTitle>	
 				</Article>
 			);
 		} else if (!props.eng) {
-			let french = portfolio.french
+			let french = portfolio.french;
 			return (
 				<Article>	
 					<ArticleTitle>{french.title1}</ArticleTitle>	
