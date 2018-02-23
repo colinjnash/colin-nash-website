@@ -53,31 +53,31 @@ transition: background-image 300ms ease-in-out;
   -webkit-transition: background-image 0.2s ease-out;
 transition: background-image 300ms ease-out;
   background-image: url(${bgimage});
-position: relative;
-background-size: cover;
+background-position:center;
+background-size: cover
   `};
   ${props => (props.display == 'About' || props.display == 'À Propos') && css `
   -webkit-transition: background-image 300ms ease-out;
 transition: background-image 300ms ease-out;
   background-image: url(${cover});
-position: relative;
-background-size: cover;
+background-position:center;
+background-size:cover;
 
   `};
     ${props => (props.display == 'Portfolio' || props.display == 'Réalisations') && css `
   -webkit-transition: background-image 300ms ease-out;
 transition: background-image 300ms ease-out;
   background-image: url(${portfolio});
-position: relative;
-background-size: cover;
+background-position:center;
+background-size:cover;
 
   `};
     ${props => (props.display == 'Contact') && css `
   -webkit-transition: background-image 0.2s ease-in-out;
-transition: background-image 0.2s ease-in-out;
+transition: background-image 0.2s ease-in-out ;
   background-image: url(${contact});
-position: relative;
-background-size: cover;
+background-position:center;
+background-size:cover;
 
   `};
 
@@ -87,7 +87,7 @@ background-size: cover;
 
     `};
 @media (max-width: 700px) {
-background-size: contain no-repeat;
+background-size: cover;
 width:auto;
 height: 40%;
 }
