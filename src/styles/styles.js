@@ -1,8 +1,8 @@
 import styled, { css, keyframes } from 'styled-components';
-import bgimage from '../assets/background-colin.png';
-import cover from '../assets/About_Cover.png';
-import contact from '../assets/Greenland.png';
-import portfolio from '../assets/portfolio-cover.png';
+import bgimage from '../assets/background-colin.jpg';
+import cover from '../assets/About_Cover.jpg';
+import contact from '../assets/Greenland.jpg';
+import portfolio from '../assets/portfolio-cover.jpg';
 import styles from './styles.css';
 
 
