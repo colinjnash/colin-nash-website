@@ -99,7 +99,7 @@ margin: 0px auto;
 width: 100%;
 height: auto;
 display: grid;
-grid-template-columns: 2fr 4fr 2fr;
+grid-template-columns: 2fr 2fr 2fr 2fr;
 grid-template-rows: auto;
 background: transparent;
 animation: ${slideIn} 700ms linear;

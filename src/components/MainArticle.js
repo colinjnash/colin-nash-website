@@ -2,7 +2,7 @@ import React from 'react';
 import { home , about , portfolio, contact } from '../static/ArticleText.js';
 import {Article , Profile, Name, Title, Ahr, ArticleWrap } from '../styles/styles';
 import {ArticleTitle, AboutP1, AboutImg1, AboutImg2, AboutImg3, AboutP2, AboutP3} from '../styles/aboutStyles';
-
+import {PortTitle, ProjectTitle, PortP, GitTitle, GitList, GitUList, GalapagosImg, GalapagosImg2, GalapagosImg3 } from '../styles/portfolioStyles';
 
 const MainArticle = (props) => {
 
@@ -69,7 +69,20 @@ const MainArticle = (props) => {
 			let english = portfolio.english;
 			return (
 				<Article>
-					<ArticleTitle>{english.title1}</ArticleTitle>	
+					<PortTitle>{english.title1}</PortTitle>
+					<ProjectTitle>{english.galapagos.title}</ProjectTitle>
+					<GalapagosImg src={require('../assets/portfolio/galapagos_128.png')}/>
+					<GalapagosImg2 src={require('../assets/portfolio/galapagos_demo.jpg')}/>
+					<GalapagosImg3 src={require('../assets/portfolio/galapagos_demo1.jpg')}/>
+					<PortP>{english.galapagos.desc}	</PortP>
+					<PortP>{english.galapagos.desc2}</PortP>
+
+					<GitTitle>{english.github}</GitTitle>
+					<GitUList>
+						{props.github.map((data, i) => 
+							<GitList key={i}>{data.created_at.substring(0,10)}:{data.type.replace(/([A-Z])/g, ' $1')} to <a href={`https://github.com/${data.repo.name}`} target="_blank">{data.repo.name}</a></GitList>
+						)}
+					</GitUList>
 				</Article>
 			);
 		} else if (!props.eng) {

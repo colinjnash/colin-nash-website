@@ -29,6 +29,12 @@ export const about = {
 export const portfolio = {
 	english: {
 			title1: 'Portfolio',
+			github: 'Recent GitHub Contributions',
+			galapagos: {
+				title: 'Galapagos Dashboard',
+				desc: 'Built with Jquery & Firebase(Auth & DB), Organize yourself and keep a mini office on your dashboard.',
+				desc2: ' Accessible from anywhere, this light, easy to navigate, and non-intrusive app is perfect for anyone looking for a lightweight dashboard.'
+			}
 		},
 		french: {
 		title1: 'Réalisations'

@@ -21,6 +21,7 @@
     "url": "https://github.com/colinjnash/colin-nash-website.git"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "express": "^4.16.2",
     "path": "^0.12.7",
     "react": "^16.2.0",
