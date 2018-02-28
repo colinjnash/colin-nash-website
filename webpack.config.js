@@ -36,8 +36,8 @@ var config = {
 	},
 	entry: __dirname + '/src/Index.js',
 	output: {
-		path: path.resolve(__dirname,'assets'),
-		publicPath: '/assets',
+		path: path.resolve(__dirname,'build'),
+		publicPath: '/',
 		filename: 'bundle.js'
 	},
 	devServer: {

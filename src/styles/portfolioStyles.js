@@ -88,7 +88,6 @@ grid-row: 3;
 display: flex;
 align-items: center;
 margin: 2% auto;
-padding: 2%;
 `;
 
 export const GalapagosImg2 = styled.img`

@@ -28,7 +28,7 @@ display: flex;
 line-height: 1.2;
 align-items: center;
 font-size: 16px;
-@media (max-width:1080px) {
+@media (max-width:1100px) {
 	margin: 20px auto;
 	grid-column: 1/5;
 	grid-row: 2;
@@ -36,14 +36,14 @@ font-size: 16px;
 }
 `;
 export const AboutP2 = styled.p`
-grid-column: 1/3;
+grid-column: 1/2;
 grid-row: 3;
 margin: 5%;
 display: flex;
 line-height: 1.2;
 align-items: center;
 font-size: 16px;
-@media (max-width:1080px) {
+@media (max-width:1100px) {
 	margin: 20px auto;
 	grid-column: 1/5;
 	grid-row: 4;
@@ -59,7 +59,7 @@ display: flex;
 line-height: 1.2;
 align-items: center;
 font-size: 16px;
-@media (max-width:1080px) {
+@media (max-width:1100px) {
 	margin: 20px auto;
 	grid-column: 1/5;
 	grid-row: 6;
@@ -73,7 +73,7 @@ grid-row: 2;
 height: 300px;;
 width: auto;
 margin: 2%;
-@media (max-width:1080px) {
+@media (max-width:1100px) {
 	display: flex;
 justify-self: center;
 	width: 100%;
@@ -93,7 +93,7 @@ width: auto;
 margin: 2%;
 display: flex;
 justify-self: end;
-@media (max-width:1080px) {
+@media (max-width:1100px) {
 		width: 100%;
 		height: auto;
 			display: flex;
@@ -113,7 +113,7 @@ width: auto;
 display: flex;
 justify-self: end;
 margin: 2%;
-@media (max-width:1080px) {
+@media (max-width:1100px) {
 		width: 100%;
 		height: auto;
 			display: flex;
