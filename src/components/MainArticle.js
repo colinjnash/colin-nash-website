@@ -3,6 +3,7 @@ import { home , about , portfolio, contact } from '../static/ArticleText.js';
 import {Article , Profile, Name, Title, Ahr, ArticleWrap } from '../styles/styles';
 import {ArticleTitle, AboutP1, AboutImg1, AboutImg2, AboutImg3, AboutP2, AboutP3} from '../styles/aboutStyles';
 import {PortTitle, ProjectTitle, PortP, GitTitle, GitList, GitUList, GalapagosImg, GalapagosImg2, GalapagosImg3 } from '../styles/portfolioStyles';
+import {ContactP } from '../styles/contactStyles.js';
 
 const MainArticle = (props) => {
 
@@ -19,7 +20,7 @@ const MainArticle = (props) => {
 						<Name>
 							{english.name}
 						</Name>
-						<Ahr/>
+						<Ahr />
 						<Title>{english.title}</Title>
 					</ArticleWrap>
 				</Article>
@@ -99,6 +100,10 @@ const MainArticle = (props) => {
 			return (
 				<Article>
 					<ArticleTitle>{english.title1}</ArticleTitle>
+					<ContactP>&#xea86;</ContactP>
+					<ContactP>&#xea8b;</ContactP>
+					<ContactP>&#xeab0;</ContactP>
+					<ContactP>&#xeac9;</ContactP>
 				</Article>
 			);
 		} else if (!props.eng) {

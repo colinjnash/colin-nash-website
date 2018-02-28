@@ -39,7 +39,7 @@ max-width: 80%;
 export const Container = styled.div`
 width: 100%;
 height: 700px;
-@media (max-width: 700px) {
+@media (max-width: 780px) {
 height: 600px;
 }
 `;
@@ -86,7 +86,7 @@ background-size:cover;
          filter: gray;
 
     `};
-@media (max-width: 700px) {
+@media (max-width: 780px) {
 background-size: cover;
 width:auto;
 height: 40%;
@@ -120,7 +120,7 @@ export const ArticleWrap = styled.div`
 grid-row: 1;
 grid-column: 2/4;
 ;
-@media (max-width: 700px) {
+@media (max-width: 780px) {
 grid-row: 2;
 grid-column: auto;
 }
@@ -138,14 +138,14 @@ width: 95%;
   color: #0e0b0d;
   `};
 
-@media (max-width: 700px) {
+@media (max-width: 780px) {
 width: 82%;
 }
 `;
 
 export const NavDiv = styled.div`
 display: none;
-@media (max-width: 700px) {
+@media (max-width: 780px) {
   display: block;
 }
 `;
@@ -170,7 +170,7 @@ color: white;
 	transition: all 700ms;
 }
 float: right;
-@media (max-width: 700px) {
+@media (max-width: 780px) {
   margin-top: 0px;
 	position: absolute;
 	  top: 20px;
@@ -205,7 +205,7 @@ export const BurgerUl = styled.ul`
 display: inline;
 max-width: 80%;
 
-@media (max-width: 700px) {
+@media (max-width: 780px) {
   position: absolute;
   display: block;
   margin-left: 0px;
@@ -289,7 +289,7 @@ border-bottom: 1px solid #2e2e2e;
 border-bottom: 5px solid #2e2e2e;
   transition: all 100ms;
 }
-@media (max-width: 700px) {
+@media (max-width: 780px) {
 color: #ededed;
  &:hover {
 border-bottom: 1px solid #2e2e2e;
@@ -308,7 +308,7 @@ text-align: center;
 margin-bottom: 3%;
 padding-top: 40px;
 color: #2e2e2e;
-@media (max-width: 700px) {
+@media (max-width: 780px) {
   display: block;
   padding-top: 0;
   margin-top: 2%;

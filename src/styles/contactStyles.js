@@ -12,3 +12,9 @@ vertical-align: top;
 text-align: center;
 color: #2e2e2e;
 `;
+
+export const ContactP = styled.p`
+font-family: 'icomoon';
+
+
+`
