@@ -70,7 +70,6 @@ export const GitList = styled.li`
 margin: auto;
 font-weight: 200;
 padding: 5px;
-margin-bottom: 3%;
 position: flex;
 letter-spacing: 1px;
 text-align: center;

@@ -241,7 +241,8 @@ color: white;
 border-bottom: 5px solid #ededed;
   transition: all 300ms;
 }
-@media (max-width: 700px) {
+@media (max-width: 780px) {
+  background: rgba(0,0,0,0.5);
   height: 22px;
   margin-right: 20px;
   font-weight: 600;
@@ -270,8 +271,9 @@ border-bottom: 1px solid #2e2e2e;
 border-bottom: 5px solid #2e2e2e;
   transition: all 100ms;
 }
-@media (max-width: 700px) {
-color: white;
+@media (max-width: 780px) {
+background: rgba(0,0,0,0.5);
+color: #ededed;
 border-bottom: 1px solid #ededed;
   &:hover {
 border-bottom: 1px solid #2e2e2e;
@@ -283,8 +285,16 @@ ${props => (props.display == 'Portfolio' || props.display == 'Réalisations') &&
 transition: all 1s;
 color: #0e0b0d;
 border-bottom: 1px solid #2e2e2e;
+ &:hover {
+border-bottom: 5px solid #2e2e2e;
+  transition: all 100ms;
+}
 @media (max-width: 700px) {
-color: #2e2e2e;
+color: #ededed;
+ &:hover {
+border-bottom: 1px solid #2e2e2e;
+  transition: all 100ms;
+}
 }
 `}
 `;
