@@ -15,6 +15,19 @@ color: #2e2e2e;
 
 export const ContactP = styled.p`
 font-family: 'icomoon';
-
-
+justify-self: center;
+font-size: 3em;
+&:hover{
+	color: red;
+	transition: color 300ms;
+}
 `
+
+export const ContactLink = styled.a`
+text-decoration: none;
+justify-self: center;
+color: #2e2e2e;
+&:visited{
+color: #2e2e2e;
+}
+`;

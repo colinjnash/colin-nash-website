@@ -14,13 +14,20 @@ export const slideIn = keyframes`
   }
   `;
 
+export const warpOut = keyframes`
+   from {
+    width: 0%;
+    to {
+    width: 90%;
+  }
+  `;
+
 export const Profile = styled.img`
 border-radius: 150px;
 height: 200px;
 width: 200px;
 opacity: 1;
-margin: 40px;
-display: grid;
+margin: 5% auto;
 grid-column: 1;
 @media (max-width: 800px) {
   padding: 5px;
@@ -46,7 +53,7 @@ height: 600px;
 
 export const Header = styled.div`
 width: 100%;
-height: 95%;
+height: 65%;
 -webkit-transition: background-image 0.2s ease-in-out;
 transition: background-image 300ms ease-in-out;
   ${props => (props.display == 'Home' || props.display == 'Accueil') && css `
@@ -117,8 +124,10 @@ grid-template-rows: auto
 `;
 
 export const ArticleWrap = styled.div`
-grid-row: 1;
-grid-column: 2/4;
+grid-column: 2/5;
+display: grid;
+align-items: center;
+grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 ;
 @media (max-width: 780px) {
 grid-row: 2;
@@ -300,34 +309,37 @@ border-bottom: 1px solid #2e2e2e;
 `;
 
 export const Name = styled.h1`
+grid-column: 1/5;
+grid-row: 2;
+display: block;
+justify-self: center;
 font-weight: 200;
 font-size: 2em;
 letter-spacing: 1px;
 vartical-align: top;
 text-align: center;
-margin-bottom: 3%;
-padding-top: 40px;
+margin: 0 auto;
 color: #2e2e2e;
 @media (max-width: 780px) {
-  display: block;
+  grid-column: 1/5;
+  grid-row: 1;
   padding-top: 0;
-  margin-top: 2%;
 }
 `;
 
 export const Title = styled.h2`
-display: grid;
+grid-column: 1/5;
+grid-row: 4;
+justify-self: center;
 font-weight: 200;
 font-size: 2em;
-position: flex;
-margin-top: 10%;
 letter-spacing: 1px;
-vertical-align: top;
+vartical-align: top;
 text-align: center;
-margin: 2%;
-color: #2e2e2e;
+margin: 0 auto;
 @media (max-width: 800px) {
-  display: block;
+  grid-column: 1/5;
+  grid-row: 3;
   width: auto;
   text-align: center;
   margin-bottom: 12px;
@@ -336,13 +348,22 @@ color: #2e2e2e;
 
 export const Ahr = styled.hr`
 width: 90%;
+display: flex;
+justify-self: center;
+text-align: center;
+grid-column: 1/5;
+grid-row: 3;
   border: 0; 
   height: 1px; 
+  animation: ${warpOut} 1.5s linear;
   background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
   background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
   background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
   background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
-      position: inherit;
+}
+@media (max-width: 800px) {
+  grid-column: 1/5;
+  grid-row: 2;
 }
 
 `;

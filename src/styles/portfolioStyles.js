@@ -96,10 +96,11 @@ grid-row: 4;
 display: flex;
 align-items: center;
 justify-self:start;
-max-height: 300px;
+height: 300px;
 @media (max-width:980px) {
 	justify-self:center;
-	width:80%;
+	width:90%;
+	height: auto;
 	grid-column:1/5;
 	grid-row:4;
 }
@@ -111,10 +112,11 @@ grid-row: 4;
 display: flex;
 align-items: center;
 justify-self:end;
-max-height: 300px;
+height: 300px;
 @media (max-width:980px) {
 	justify-self:center;
-	width:80%;
+	width:90%;
+	height: auto;
 	grid-column:1/5;
 	grid-row:5;
 }
