@@ -53,7 +53,8 @@ height: 600px;
 
 export const Header = styled.div`
 width: 100%;
-height: 65%;
+height: 80%;
+
 -webkit-transition: background-image 0.2s ease-in-out;
 transition: background-image 300ms ease-in-out;
   ${props => (props.display == 'Home' || props.display == 'Accueil') && css `
@@ -93,6 +94,10 @@ background-size:cover;
          filter: gray;
 
     `};
+
+@media (max-width: 1600px) {
+  height: 65%;
+}
 @media (max-width: 780px) {
 background-size: cover;
 width:auto;
