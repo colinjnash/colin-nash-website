@@ -27,8 +27,8 @@ border-radius: 150px;
 height: 200px;
 width: 200px;
 opacity: 1;
-margin: 5% auto;
-grid-column: 1;
+margin: 20px;
+grid-column: 1/2;
 @media (max-width: 800px) {
   padding: 5px;
   border-radius: 200px;
