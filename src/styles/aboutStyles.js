@@ -11,7 +11,8 @@ letter-spacing: 1px;
 vertical-align: top;
 text-align: center;
 color: #2e2e2e;
-@media (max-width:1080px) {
+padding-bottom: 10px;
+@media (max-width:1100px) {
 	display: flex;
 	align-items: center;
 	margin: 20px auto;
@@ -21,13 +22,14 @@ color: #2e2e2e;
 `;
 
 export const AboutP1 = styled.p`
-grid-column: 2/5;
+grid-column: 3/5;
 grid-row: 2;
-margin: 5%;
+margin: 0 18%;
 display: flex;
 line-height: 1.2;
 align-items: center;
 font-size: 16px;
+justify-self: center;
 @media (max-width:1100px) {
 	margin: 20px auto;
 	grid-column: 1/5;
@@ -36,13 +38,14 @@ font-size: 16px;
 }
 `;
 export const AboutP2 = styled.p`
-grid-column: 1/2;
+grid-column: 1/3;
 grid-row: 3;
-margin: 5%;
+margin: 0 18%;
 display: flex;
 line-height: 1.2;
 align-items: center;
 font-size: 16px;
+justify-self: center;
 @media (max-width:1100px) {
 	margin: 20px auto;
 	grid-column: 1/5;
@@ -52,9 +55,9 @@ font-size: 16px;
 `;
 
 export const AboutP3 = styled.p`
-grid-column: 2/5;
+grid-column: 3/5;
 grid-row: 4;
-margin: 5%;
+margin: 0 18%;
 display: flex;
 line-height: 1.2;
 align-items: center;
@@ -68,11 +71,12 @@ font-size: 16px;
 `;
 
 export const AboutImg1 = styled.img`
-grid-column: 1;
+grid-column: 1/3;
 grid-row: 2;
-height: 300px;;
+height: 300px;
 width: auto;
 margin: 2%;
+justify-self: center;
 @media (max-width:1100px) {
 	display: flex;
 justify-self: center;
@@ -92,7 +96,7 @@ height: 300px;
 width: auto;
 margin: 2%;
 display: flex;
-justify-self: end;
+justify-self: center;
 @media (max-width:1100px) {
 		width: 100%;
 		height: auto;
@@ -106,12 +110,12 @@ justify-self: center;
 `;
 
 export const AboutImg3 = styled.img`
-grid-column: 1/2;
+grid-column: 1/3;
 grid-row: 4;
 height: 300px;
 width: auto;
 display: flex;
-justify-self: end;
+justify-self: center;
 margin: 2%;
 @media (max-width:1100px) {
 		width: 100%;
