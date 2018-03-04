@@ -111,6 +111,7 @@ height: 300px;
 	height: auto;
 	grid-column:1/5;
 	grid-row:4;
+	margin: 5% 0px;
 }
 `;
 
