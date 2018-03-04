@@ -30,6 +30,7 @@ line-height: 1.2;
 align-items: center;
 font-size: 16px;
 justify-self: center;
+width: 532px;
 @media (max-width:1100px) {
 	margin: 20px auto;
 	grid-column: 1/5;
@@ -47,6 +48,7 @@ line-height: 1.2;
 align-items: center;
 font-size: 16px;
 justify-self: center;
+width: 532px;
 @media (max-width:1100px) {
 	margin: 20px auto;
 	grid-column: 1/5;
@@ -65,6 +67,7 @@ line-height: 1.2;
 align-items: center;
 font-size: 16px;
 justify-self: center;
+width: 532px;
 @media (max-width:1100px) {
 	margin: 20px auto;
 	grid-column: 1/5;
@@ -81,6 +84,7 @@ height: 300px;
 width: auto;
 margin: 2%;
 justify-self: center;
+width: 532px;
 @media (max-width:1100px) {
 	display: flex;
 justify-self: center;
