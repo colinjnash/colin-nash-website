@@ -116,7 +116,6 @@ background: transparent;
 animation: ${slideIn} 700ms linear;
 margin-left: auto;
 margin-right: auto;
-width: 90%;
 grid-template-columns: auto;
 grid-template-rows: auto
 }
@@ -324,6 +323,7 @@ color: #2e2e2e;
   grid-column: 1/5;
   grid-row: 1;
   padding-top: 0;
+   font-size: 1.5em;
 }
 `;
 
@@ -337,12 +337,14 @@ letter-spacing: 1px;
 vartical-align: top;
 text-align: center;
 margin: 0 auto;
+color: #2e2e2e;
 @media (max-width: 800px) {
   grid-column: 1/5;
   grid-row: 3;
   width: auto;
   text-align: center;
   margin-bottom: 12px;
+  font-size: 1.5em;
 }
 `;
 

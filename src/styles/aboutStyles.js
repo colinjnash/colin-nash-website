@@ -35,6 +35,7 @@ justify-self: center;
 	grid-column: 1/5;
 	grid-row: 2;
 	width: 80%;
+	margin: 5%;
 }
 `;
 export const AboutP2 = styled.p`
@@ -51,6 +52,7 @@ justify-self: center;
 	grid-column: 1/5;
 	grid-row: 4;
 	width: 80%;
+	margin: 5%;
 }
 `;
 
@@ -62,11 +64,13 @@ display: flex;
 line-height: 1.2;
 align-items: center;
 font-size: 16px;
+justify-self: center;
 @media (max-width:1100px) {
 	margin: 20px auto;
 	grid-column: 1/5;
 	grid-row: 6;
 	width: 80%;
+	margin: 5%;
 }
 `;
 
@@ -85,7 +89,7 @@ justify-self: center;
 	grid-column: 1/5;
 	grid-row: 3;
 	grid-row-gap: 1em;
-	margin: 5%;
+	margin: 0;
 }
 `;
 
@@ -105,7 +109,7 @@ justify-self: center;
 	height: auto;
 	grid-column: 1/5;
 	grid-row: 5;
-		margin: 5%;
+		margin: 0;
 }
 `;
 
@@ -125,6 +129,6 @@ justify-self: center;
 	height: auto;
 	grid-column: 1/5;
 	grid-row: 7;
-		margin: 5%;
+		margin: 0;
 }
 `;

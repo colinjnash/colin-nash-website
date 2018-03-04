@@ -60,7 +60,13 @@ const MainArticle = (props) => {
 			let french = about.french;
 			return (
 				<Article>
-					<ArticleTitle>{french.title1}</ArticleTitle>	
+					<ArticleTitle>{french.title1}</ArticleTitle>
+					<AboutImg1 src={require('../assets/kilimanjaro.jpg')}/>
+					<AboutP1>{french.p1}</AboutP1>
+					<AboutP2>{french.p2}</AboutP2>
+					<AboutImg2 src={require('../assets/kalemie.jpg')}/>
+					<AboutImg3 src={require('../assets/greenland_about.jpg')}/>
+					<AboutP3>{french.p3}</AboutP3>	
 				</Article>
 			);
 		}
@@ -90,7 +96,20 @@ const MainArticle = (props) => {
 			let french = portfolio.french;
 			return (
 				<Article>	
-					<ArticleTitle>{french.title1}</ArticleTitle>	
+					<PortTitle>{french.title1}</PortTitle>
+					<ProjectTitle>{french.galapagos.title}</ProjectTitle>
+					<GalapagosImg src={require('../assets/portfolio/galapagos_128.png')}/>
+					<GalapagosImg2 src={require('../assets/portfolio/galapagos_demo.jpg')}/>
+					<GalapagosImg3 src={require('../assets/portfolio/galapagos_demo1.jpg')}/>
+					<PortP>{french.galapagos.desc}	</PortP>
+					<PortP>{french.galapagos.desc2}</PortP>
+
+					<GitTitle>{french.github}</GitTitle>
+					<GitUList>
+						{props.github.map((data, i) => 
+							<GitList key={i}>{data.created_at.substring(0,10)}:{data.type.replace(/([A-Z])/g, ' $1')} to <a href={`https://github.com/${data.repo.name}`} target="_blank">{data.repo.name}</a></GitList>
+						)}
+					</GitUList>
 				</Article>
 			);
 		}
