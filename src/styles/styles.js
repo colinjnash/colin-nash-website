@@ -2,7 +2,7 @@ import styled, { css, keyframes } from 'styled-components';
 import bgimage from '../assets/background-colin.jpg';
 import cover from '../assets/About_Cover.jpg';
 import contact from '../assets/Greenland.jpg';
-import portfolio from '../assets/portfolio-cover2.jpg';
+import portfolio from '../assets/port-cover.jpg';
 import styles from './styles.css';
 
 
