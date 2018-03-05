@@ -2,7 +2,7 @@ import styled, { css, keyframes } from 'styled-components';
 
 
 export const AboutTitle = styled.h2`
-grid-column: 1/4;
+grid-column: 1/5;
 font-weight: 200;
 font-size: 2em;
 position: flex;
@@ -16,11 +16,12 @@ export const ContactP = styled.p`
 font-family: 'icomoon';
 justify-self: center;
 font-size: 3em;
+display: flex;
 &:hover{
 	color: red;
 	transition: color 300ms;
 }
-`
+`;
 
 export const ContactLink = styled.a`
 text-decoration: none;
