@@ -1,6 +1,7 @@
 import React from 'react';
 import { home , about , portfolio, contact } from '../static/ArticleText.js';
-import {Article , Profile, Name, Title, Ahr, ArticleWrap } from '../styles/styles';
+import { Profile, Name, Title, Ahr } from '../styles/homeStyles';
+import {Article , ArticleWrap } from '../styles/styles';
 import {ArticleTitle, AboutP1, AboutImg1, AboutImg2, AboutImg3, AboutP2, AboutP3} from '../styles/aboutStyles';
 import {PortTitle, ProjectTitle, PortP, GitTitle, GitList, GitUList, GalapagosImg, GalapagosImg2, GalapagosImg3 } from '../styles/portfolioStyles';
 import {ContactP, ContactLink} from '../styles/contactStyles.js';
