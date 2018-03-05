@@ -20,7 +20,7 @@ module.exports = {
 				}
 			},
 			{
-				test: /\.(png|jp(e*)g|)$/,  
+				test: /\.(png|jp(e*)g|JPG)$/,  
 				use: [{
 					loader: 'url-loader',
 					options: { 
