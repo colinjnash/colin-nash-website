@@ -2,7 +2,7 @@ import styled, { css, keyframes } from 'styled-components';
 import bgimage from '../assets/background-colin.jpg';
 import cover from '../assets/About_Cover.jpg';
 import contact from '../assets/Greenland.jpg';
-import portfolio from '../assets/portfolio-cover.jpg';
+import portfolio from '../assets/portfolio-cover2.jpg';
 import styles from './styles.css';
 
 
@@ -282,7 +282,7 @@ border-bottom: 1px solid #2e2e2e;
 `}
 ${props => (props.display == 'Portfolio' || props.display == 'Réalisations') && css` 
 transition: all 1s;
-color: #0e0b0d;
+color:  #2e2e2e;
 border-bottom: 1px solid #2e2e2e;
  &:hover {
 border-bottom: 5px solid #2e2e2e;
@@ -314,7 +314,7 @@ background: #2e2e2e;
 `}
 ${props => (props.display == 'Portfolio' || props.display == 'Réalisations') && css` 
 transition: all 1s;
-background: #2e2e2e;
+background: #2760bc;
 `}
   &:first-child(1)  ${props => props.nav == true && css `
    opacity: 1;

@@ -3,7 +3,7 @@ import { home , about , portfolio, contact } from '../static/ArticleText.js';
 import { Profile, Name, Title, Ahr } from '../styles/homeStyles';
 import {Article , ArticleWrap } from '../styles/styles';
 import {ArticleTitle, AboutP1, AboutImg1, AboutImg2, AboutImg3, AboutP2, AboutP3} from '../styles/aboutStyles';
-import {PortTitle, ProjectTitle, PortP, GitTitle, GitList, GitUList, GalapagosImg, GalapagosImg2, GalapagosImg3 } from '../styles/portfolioStyles';
+import {PortTitle, ProjectTitle, PortP, GitTitle, GitList, GitUList, GalapagosImg, GalapagosImg2, GalapagosImg3, GithubP, GithubLink} from '../styles/portfolioStyles';
 import {ContactP, ContactLink} from '../styles/contactStyles.js';
 
 const MainArticle = (props) => {
@@ -84,7 +84,7 @@ const MainArticle = (props) => {
 					<GalapagosImg3 src={require('../assets/portfolio/galapagos_demo1.jpg')}/>
 					<PortP>{english.galapagos.desc}	</PortP>
 					<PortP>{english.galapagos.desc2}</PortP>
-
+					<GithubLink href="https://github.com/colinjnash/Galapagos-Dashboard" target="_blank"><GithubP>Check Out the Code Here!</GithubP></GithubLink>
 					<GitTitle>{english.github}</GitTitle>
 					<GitUList>
 						{props.github.map((data, i) => 
@@ -104,7 +104,7 @@ const MainArticle = (props) => {
 					<GalapagosImg3 src={require('../assets/portfolio/galapagos_demo1.jpg')}/>
 					<PortP>{french.galapagos.desc}	</PortP>
 					<PortP>{french.galapagos.desc2}</PortP>
-
+					<GithubLink href="https://github.com/colinjnash/Galapagos-Dashboard" target="_blank"><GithubP>Link</GithubP></GithubLink>
 					<GitTitle>{french.github}</GitTitle>
 					<GitUList>
 						{props.github.map((data, i) => 

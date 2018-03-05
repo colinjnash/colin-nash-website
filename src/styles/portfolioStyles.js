@@ -61,24 +61,57 @@ font-weight: 200;
 position: flex;
 padding: 0;
 letter-spacing: 1px;
-text-align: center;
+margin: 2px auto;
 vertical-align: top;
 color: #2e2e2e;
 list-style-type: none; 
 `;
 export const GitList = styled.li`
-margin: auto;
+margin: 0px auto;
 font-weight: 200;
+font-size: .8em;
 padding: 5px;
 position: flex;
 letter-spacing: 1px;
-text-align: center;
+text-align: left;
 vertical-align: top;
 color: #2e2e2e;
 list-style-type: none; 
 @media(max-width: 780px) {
 	text-align: center;
 	font-size: .6em;
+}
+`;
+
+export const GithubP = styled.p`
+grid-column: 1/5;
+justify-self: center;
+grid-row: auto;
+font-size: 1.4em;
+
+
+`;
+
+export const GithubLink = styled.a`
+text-decoration: none;
+justify-self: center;
+display: flex;
+grid-column: 1/5;
+color: #2e2e2e;
+&:visited{
+color: #2e2e2e;
+}
+&:before{
+	font-family: 'icomoon';
+	content: '\\eab0';
+    padding-right: 3px;
+    font-size: 2em;
+    display:flex;
+    margin: auto 5px;
+}
+&:hover{
+	color: #6e5494;
+	transition: all 300ms;
 }
 `;
 
