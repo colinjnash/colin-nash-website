@@ -18,7 +18,7 @@ export const about = {
 	english: {
 		title1: 'About Me',
 		p1: 'Whether it\'s assisting refugees in Darfur, or doing mountain treks on Kilimanjaro, I\'ve always been up for challenging myself and pushing my comfort zone to the extreme.',
-		p2:'For the last few years, I\'ve had the amazing opportunity of working as a Special Missions contractor. Whether it\'s flying soldiers in to Timbuktu or helping flights in Goma, Democratic Republic of Congo,I am always up for the unknown and exciting, trying to bring energy and entusiasm to any difficult project.',
+		p2:'For the last few years, I\'ve had the amazing opportunity of working as a Special Missions contractor. Whether it\'s flying soldiers into Timbuktu or helping flights in Goma, Democratic Republic of Congo, I am always up for the unknown and exciting, trying to bring energy and enthusiasm to any difficult project.',
 		p3:'After years of overseas conflict zone work, I finally decided to devote my time to another passion: Web Development. I found that adventure doesn\'t have to be in some far away place, and that changing the way people can look at the world can be done from my desktop with a few lines of code.'
 	},
 	french: {
