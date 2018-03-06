@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import PropTypes from 'prop-types';
 import MainArticle from './components/MainArticle';
 import axios from 'axios';
-
+require('./static/img/favicon.ico');
 import { connect } from 'react-redux';
 import * as actionTypes from './actions/actionTypes';
 
