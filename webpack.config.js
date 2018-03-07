@@ -25,6 +25,16 @@ var config = {
 				}]
 			},
 			{
+				test: /\.ico$/,  
+				use: [{
+					loader: 'file-loader',
+					options: { 
+						limit: 8000, // Convert images < 8kb to base64 strings
+						name: '[name].[ext]'
+					} 
+				}]
+			},
+			{
 				test: /\.(eot|svg|ttf|woff|woff2)$/,
 				loader: 'url-loader?limit=100000'
 			},
@@ -33,6 +43,7 @@ var config = {
 				loader: 'style-loader!css-loader'
 			}
 		],
+
 	},
 	entry: __dirname + '/src/Index.js',
 	output: {

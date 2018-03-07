@@ -32,7 +32,7 @@ export const Container = styled.div`
 width: auto;
 height: 700px;
 @media (max-width: 780px) {
-height: 600px;
+height: 450px;
 }
 `;
 
@@ -86,7 +86,7 @@ background-size:cover;
 @media (max-width: 780px) {
 background-size: cover;
 width:auto;
-height: 40%;
+height: 70%;
 }
 `;
 

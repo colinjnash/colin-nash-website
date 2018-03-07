@@ -39,7 +39,7 @@ color: #2e2e2e;
 
 export const PortP = styled.p`
 grid-column: 2/4;
-margin:2%;
+margin: 15%;
 grid-row: auto;
 padding: 5px;
 font-weight: 200;
@@ -48,9 +48,13 @@ letter-spacing: 1px;
 text-align: center;
 vertical-align: top;
 color: #2e2e2e;
+padding: 10%;
 @media(max-width: 780px) {
+	padding: 10%;
 	text-align: center;
 	font-size: .8em;
+	margin: 5%;
+	padding: 5%;
 }
 `;
 
@@ -121,6 +125,7 @@ grid-row: 3;
 display: flex;
 align-items: center;
 margin: 3% auto;
+padding: 10%;
 @media(max-width: 780px) {
 	margin:5% auto;
 }
@@ -133,6 +138,7 @@ display: flex;
 align-items: center;
 justify-self:start;
 height: 300px;
+padding: 10% 2%;
 @media (max-width: 980px){
 	grid-column: 1/5;
 	grid-row: 4;
@@ -140,11 +146,12 @@ height: 300px;
 }
 @media (max-width:780px) {
 	justify-self:center;
-	width:100%;
+	width:90%;
 	height: auto;
 	grid-column:1/5;
 	grid-row:4;
 	margin: 5% 0px;
+	padding: 5%;
 }
 `;
 
@@ -155,6 +162,7 @@ display: flex;
 align-items: center;
 justify-self:end;
 height: 300px;
+padding: 10% 2%;
 @media (max-width: 980px){
 	grid-column: 1/5;
 	grid-row:5;
@@ -162,7 +170,9 @@ height: 300px;
 }
 @media (max-width:780px) {
 	justify-self:center;
-	width:100%;
+	width:90%;
+	padding: 5%;
+	margin: 5%;
 	height: auto;
 	grid-column:1/5;
 	grid-row:5;

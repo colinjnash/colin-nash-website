@@ -16,21 +16,17 @@ const MainArticle = (props) => {
 			let english = home.english;
 			return (
 				<Article>	
-					<Profile src={require('../assets/Profile_Main.png')} />
-					<ArticleWrap>
 						<Name>
 							{english.name}
 						</Name>
 						<Ahr />
 						<Title>{english.title}</Title>
-					</ArticleWrap>
 				</Article>
 			);
 		} else if (!props.eng) {
 			let french = home.french;
 			return (
 				<Article>
-					<Profile src={require('../assets/Profile_Main.png')} />		
 					<ArticleWrap>
 						<Name>
 							{french.name}
