@@ -39,22 +39,21 @@ color: #2e2e2e;
 
 export const PortP = styled.p`
 grid-column: 2/4;
-margin: 15%;
+margin: 20px;
 grid-row: auto;
-padding: 5px;
 font-weight: 200;
 position: flex;
 letter-spacing: 1px;
 text-align: center;
 vertical-align: top;
 color: #2e2e2e;
-padding: 10%;
+padding: 20px;
 @media(max-width: 780px) {
 	padding: 10%;
 	text-align: center;
 	font-size: .8em;
-	margin: 5%;
-	padding: 5%;
+	margin: 10px;
+	padding: 10px;
 }
 `;
 
@@ -125,9 +124,9 @@ grid-row: 3;
 display: flex;
 align-items: center;
 margin: 3% auto;
-padding: 10%;
+padding: 10px;
 @media(max-width: 780px) {
-	margin:5% auto;
+	margin: 10px auto;
 }
 `;
 
@@ -150,8 +149,8 @@ padding: 10% 2%;
 	height: auto;
 	grid-column:1/5;
 	grid-row:4;
-	margin: 5% 0px;
-	padding: 5%;
+	margin: 10px 0px;
+	padding: 5px;
 }
 `;
 
@@ -171,8 +170,8 @@ padding: 10% 2%;
 @media (max-width:780px) {
 	justify-self:center;
 	width:90%;
-	padding: 5%;
-	margin: 5%;
+	padding: 5px;
+	margin: 10px 0;
 	height: auto;
 	grid-column:1/5;
 	grid-row:5;

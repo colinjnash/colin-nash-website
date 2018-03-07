@@ -39,14 +39,14 @@ export const Name = styled.h1`
 grid-column: 1/5;
 grid-row: 2;
 display: flex;
-padding-top: 20%;
+padding-top: 20px;
 justify-self: center;
 font-weight: 200;
 font-size: 2em;
 letter-spacing: 1px;
 vartical-align: top;
 text-align: center;
-margin: 15% auto;
+margin: 20px auto;
 color: #2e2e2e;
 @media (max-width: 780px) {
   grid-column: 1/5;
@@ -85,7 +85,7 @@ font-size: 2em;
 letter-spacing: 1px;
 vartical-align: top;
 text-align: center;
-margin: 15% auto;
+margin: 20px auto;
 color: #2e2e2e;
 display: flex;
 @media (max-width: 800px) {

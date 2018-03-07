@@ -38,6 +38,7 @@ width: 532px;
 	width: 80%;
 	margin: 10%;
 	padding: 8%;
+	text-align: center;
 }
 `;
 export const AboutP2 = styled.p`
@@ -57,6 +58,7 @@ width: 532px;
 	width: 80%;
 	margin: 10%;
 	padding: 8%;
+	text-align: center;
 }
 `;
 
@@ -77,6 +79,7 @@ width: 532px;
 	width: 80%;
 	margin: 10%;
 	padding: 8%;
+	text-align: center;
 }
 `;
 
