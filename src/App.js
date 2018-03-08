@@ -6,7 +6,6 @@ import MainArticle from './components/MainArticle';
 import axios from 'axios';
 require('./static/img/favicon.ico');
 import { connect } from 'react-redux';
-import registerServiceWorker from './registerserviceworker';
 
 import * as actionTypes from './actions/actionTypes';
 
