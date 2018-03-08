@@ -5,7 +5,7 @@ module.exports = {
         "amd": true,
         "node":true
     },
-    "extends": ["eslint:recommended", "plugin:react/recommended"],
+    "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:import/warnings"],
      "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
