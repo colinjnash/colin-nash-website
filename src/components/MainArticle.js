@@ -27,13 +27,11 @@ const MainArticle = (props) => {
 			let french = home.french;
 			return (
 				<Article>
-					<ArticleWrap>
 						<Name>
 							{french.name}
 						</Name>
 						<Ahr/>
 						<Title>{french.title}</Title>
-					</ArticleWrap>
 				</Article>
 			);
 
