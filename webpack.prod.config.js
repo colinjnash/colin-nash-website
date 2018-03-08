@@ -21,13 +21,10 @@ module.exports = {
 			},
 			{
 				test: /\.(png|jp(e*)g|JPG)$/,  
-				use: [{
-					loader: 'url-loader',
-					options: { 
-						limit: 8000, // Convert images < 8kb to base64 strings
-						name: 'assets/images/[hash]-[name].[ext]'
-					} 
-				}]
+				use: [
+					'url-loader?limit=10000',
+					'img-loader'
+				],
 			},
 			{
 				test: /\.ico$/,  
