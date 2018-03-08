@@ -59,7 +59,7 @@ module.exports = {
 		}),
 		new webpack.optimize.UglifyJsPlugin(),
 		new ServiceWorkerWebpackPlugin({
-			entry: path.join(__dirname, 'src/registerserviceworker.js'),
+			entry: __dirname + '/src/registerserviceworker.js',
 		}),
 	]
 };
