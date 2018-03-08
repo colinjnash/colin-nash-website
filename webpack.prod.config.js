@@ -21,10 +21,14 @@ module.exports = {
 			},
 			{
 				test: /\.(png|jp(e*)g|JPG)$/,  
-				use: [
-					'url-loader?limit=10000',
-					'img-loader'
-				],
+				use: ['file-loader',
+					{
+						loader: 'image-webpack-loader',
+						options: {
+							bypassOnDebug: true,
+						},
+					},
+				]
 			},
 			{
 				test: /\.ico$/,  
