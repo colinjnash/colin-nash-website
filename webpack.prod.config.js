@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
-var ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
+const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
 	output: {
@@ -52,16 +53,23 @@ module.exports = {
 	},
 	entry: __dirname + '/src/Index.js',
 	plugins: [
-		new webpack.DefinePlugin({
+		new webpack.DefinePlugin({ // <-- key to reducing React's size
 			'process.env': {
-				// This tells the Webpack and Babel for optimization for performance
-				NODE_ENV: JSON.stringify('production')
+				'NODE_ENV': JSON.stringify('production')
 			}
-		}),
-		new webpack.optimize.UglifyJsPlugin(),
+		}), //dedupe similar code 
+		new webpack.optimize.UglifyJsPlugin(), //minify everything
+		new webpack.optimize.AggressiveMergingPlugin(),
 		new ServiceWorkerWebpackPlugin({
-			entry: __dirname + '/src/registerserviceworker.js',
+			entry: __dirname + '/src/registerserviceworker.js',//Merge chunks 
 		}),
+		new CompressionPlugin({   
+			asset: '[path].gz[query]',
+			algorithm: 'gzip',
+			test: /\.js$|\.css$|\.html$/,
+			threshold: 10240,
+			minRatio: 0.8
+		})
 	]
 };
 
