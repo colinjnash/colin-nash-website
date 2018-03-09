@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+var ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
 	output: {
@@ -69,6 +70,9 @@ module.exports = {
 			test: /\.js$|\.css$|\.html$/,
 			threshold: 10240,
 			minRatio: 0.8
+		}),
+		new ManifestPlugin({
+			fileName: 'asset-manifest.json', // Not to confuse with manifest.json 
 		})
 	]
 };

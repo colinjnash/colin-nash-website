@@ -12,5 +12,5 @@ const store = createStore(rootReducer);
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.querySelector('#container'));
 
-// registerServiceWorker();
+registerServiceWorker();
 // Only for HTTPS connections. Will work around.
