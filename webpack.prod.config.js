@@ -1,8 +1,10 @@
 const webpack = require('webpack');
 const path = require('path');
-const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
-var ManifestPlugin = require('webpack-manifest-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 
 module.exports = {
 	output: {
@@ -54,15 +56,24 @@ module.exports = {
 	},
 	entry: __dirname + '/src/Index.js',
 	plugins: [
-		new webpack.DefinePlugin({ // <-- key to reducing React's size
+		new webpack.DefinePlugin({ 
 			'process.env': {
 				'NODE_ENV': JSON.stringify('production')
 			}
-		}), //dedupe similar code 
+		}), 
 		new webpack.optimize.UglifyJsPlugin(), //minify everything
 		new webpack.optimize.AggressiveMergingPlugin(),
-		new ServiceWorkerWebpackPlugin({
-			entry: __dirname + '/src/registerserviceworker.js',//Merge chunks 
+		new SWPrecacheWebpackPlugin({
+			filename: 'service-worker.js',
+			logger(message) {
+				if (message.indexOf('Total precache size is') === 0) {
+					return;
+				}
+				console.log(message);
+			},
+			minify: true,
+			navigateFallback: './index.html',
+			staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
 		}),
 		new CompressionPlugin({   
 			asset: '[path].gz[query]',
@@ -72,8 +83,11 @@ module.exports = {
 			minRatio: 0.8
 		}),
 		new ManifestPlugin({
-			fileName: 'asset-manifest.json', // Not to confuse with manifest.json 
-		})
+			fileName: 'asset-manifest.json', // Different than manifest.json
+		}),
+		new CopyWebpackPlugin([
+			{ from: 'src/pwa' }, // define the path of the files to be copied
+		])
 	]
 };
 
