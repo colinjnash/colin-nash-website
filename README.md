@@ -1,4 +1,4 @@
-### React Personal Website
+# React Personal Website
 
 **Built on**: React, Webpack, Express, Styled Components.
 
@@ -6,7 +6,7 @@
 
 ## Configuration
 
-# Webpack
+### Webpack
 
 Webpack configured without bloat, and uses `Webpack-Image-Compression`, `SWPreCacheConfig` for the Serviceworker. 
 
@@ -17,13 +17,13 @@ For any changes:
 **dev**: Webpack.config.js
 **prod**: Webpack.prod.config.js
 
-# Initalization
+### Initalization
 
 for `localhost` testing, run `npm start`.
 
 for `localhost` production build, run `npm run build`, followed by `npm run prod`, which will point to the express server.  
 
-# Deployment
+### Deployment
 
 **Heroku**: Simply push the repo to `Heroku master`. `Server.js` should be a web proc and the entry point for Heroku builds.
 
