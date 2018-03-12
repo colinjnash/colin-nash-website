@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavSpan, BurgerUl, Nav, NavDiv, MenuLine } from '../styles/styles';
+import { Link } from 'react-router-dom';
 
 const Navbar = (props) => {
 
@@ -16,7 +17,8 @@ const Navbar = (props) => {
 
 
 	const renderBurger = (arr) => {
-		return arr.map((item, i) => 
+		return arr.map((item, i) =>
+		<Link to={`/${item}`} key={i}> 
 			<NavSpan
 				key={i}
 				onClick = {(event) => props.changeDisplay(event)}
@@ -24,7 +26,8 @@ const Navbar = (props) => {
 				display = {props.display}
 			>
 				{item}
-			</NavSpan>  
+			</NavSpan> 
+		</Link> 
 		);
 	};
 

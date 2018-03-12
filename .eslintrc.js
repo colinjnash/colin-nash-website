@@ -18,6 +18,9 @@ module.exports = {
         "react"
     ],
     "rules": {
+        "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+        "no-fallthrough": 0,             // http://eslint.org/docs/rules/no-fallthrough
         "indent": [
             "error",
             "tab"
