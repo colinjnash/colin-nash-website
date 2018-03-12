@@ -114,7 +114,7 @@ const MainArticle = (props) => {
 			return (
 				<Article>
 					<ArticleTitle>{english.title1}</ArticleTitle>
-					<ContactLink href="mailto:colinjnash@gmail.com.com?Subject=Hello!" target="_top"><ContactP>&#xea86;</ContactP></ContactLink>
+					<ContactLink href="mailto:colinjnash@gmail.com?Subject=Hello!" target="_top"><ContactP>&#xea86;</ContactP></ContactLink>
 					<ContactLink href="https://plus.google.com/u/0/+ColinNash" target="_blank"><ContactP>&#xea8b;</ContactP></ContactLink>
 					<ContactLink href="https://github.com/colinjnash" target="_blank"><ContactP>&#xeab0;</ContactP></ContactLink>
 					<ContactLink href="https://www.linkedin.com/in/colin-nash/" target="_blank"><ContactP>&#xeac9;</ContactP></ContactLink>
@@ -125,7 +125,7 @@ const MainArticle = (props) => {
 			return (
 				<Article>	
 					<ArticleTitle>{french.title1}</ArticleTitle>
-					<ContactLink href="mailto:colinjnash@gmail.com.com?Subject=Hey%20Let's%20Talk!" target="_top"><ContactP>&#xea86;</ContactP></ContactLink>
+					<ContactLink href="mailto:colinjnash@gmail.com?Subject=Hey%20Let's%20Talk!" target="_top"><ContactP>&#xea86;</ContactP></ContactLink>
 					<ContactLink href="https://plus.google.com/u/0/+ColinNash" target="_blank"><ContactP>&#xea8b;</ContactP></ContactLink>
 					<ContactLink href="https://github.com/colinjnash" target="_blank"><ContactP>&#xeab0;</ContactP></ContactLink>
 					<ContactLink href="https://www.linkedin.com/in/colin-nash/" target="_blank"><ContactP>&#xeac9;</ContactP></ContactLink>
