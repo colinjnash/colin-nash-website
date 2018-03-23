@@ -82,7 +82,8 @@ App.propTypes = {
 	displayTitle: PropTypes.string,
 	nav: PropTypes.bool,
 	changeDisplay: PropTypes.func,
-	github: PropTypes.array
+	github: PropTypes.array,
+	addGit: PropTypes.object
 
 };
 
